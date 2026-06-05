@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
-import logoSabrina from "@/imports/Logo_Sabrina.png";
+import logoSabrina from "@/imports/mutseele.png";
 import sabrinavPhoto from "@/imports/Sabrina.png";
 
 // ─── Design tokens ────────────────────────────────────────────────────────────

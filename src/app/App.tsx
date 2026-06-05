@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { Menu, X, ArrowRight, Download, Star, Heart, Sparkles, CheckCircle } from "lucide-react";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/app/components/ui/accordion";
-import logoSabrina from "@/imports/Logo_Sabrina.png";
+import logoSabrina from "@/imports/mutseele.png";
 import sabrinavPhoto from "@/imports/Sabrina.png";
 
 const D = { fontFamily: "var(--font-display)" };
@@ -13,10 +13,8 @@ const G  = "linear-gradient(135deg, #E01F5A 0%, #F47820 100%)";
 const GS = "linear-gradient(135deg, #fce4ec 0%, #fde8d8 100%)";
 const GT: React.CSSProperties = { background: G, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" };
 
-// Logo on light bg: mix-blend-mode multiply makes the white areas transparent
-const LOGO_LIGHT: React.CSSProperties = { mixBlendMode: "multiply" };
 // Logo on dark/gradient bg: invert to white
-const LOGO_DARK: React.CSSProperties  = { filter: "brightness(0) invert(1)", opacity: 0.88 };
+const LOGO_DARK: React.CSSProperties = { filter: "brightness(0) invert(1)", opacity: 0.88 };
 
 function ctaLabel(type: string): string {
   if (["1:1 Begleitung", "Premium 1:1", "3-Monats-Premium"].includes(type)) return "Platz anfragen";
@@ -97,7 +95,7 @@ export default function App() {
       {/* ══ NAVIGATION ══════════════════════════════════════════════════════ */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/92 backdrop-blur-md border-b border-border">
         <div className="max-w-lg mx-auto px-5 py-3 flex items-center justify-between lg:max-w-6xl lg:px-10">
-          <ImageWithFallback src={logoSabrina} alt="MUTSeeLe" className="h-10 w-auto object-contain" style={LOGO_LIGHT} />
+          <ImageWithFallback src={logoSabrina} alt="MUTSeeLe" className="h-10 w-auto object-contain" style={{}} />
 
           {/* Desktop links */}
           <div className="hidden lg:flex items-center gap-8">
@@ -142,7 +140,7 @@ export default function App() {
         <div className="relative z-10 -mt-32 px-6 pb-16 text-center max-w-lg mx-auto">
           <FadeUp>
             <div className="flex justify-center mb-5">
-              <ImageWithFallback src={logoSabrina} alt="MUTSeeLe" className="h-12 w-auto object-contain opacity-90" style={LOGO_LIGHT} />
+              <ImageWithFallback src={logoSabrina} alt="MUTSeeLe" className="h-12 w-auto object-contain opacity-90" style={{}} />
             </div>
             <h1 style={D} className="text-[2.8rem] font-light leading-[1.15] text-foreground mb-5">
               Angst beginnt<br />im Kopf —{" "}
