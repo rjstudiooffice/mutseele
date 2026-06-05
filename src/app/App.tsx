@@ -13,8 +13,6 @@ const G  = "linear-gradient(135deg, #E01F5A 0%, #F47820 100%)";
 const GS = "linear-gradient(135deg, #fce4ec 0%, #fde8d8 100%)";
 const GT: React.CSSProperties = { background: G, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" };
 
-// Logo on dark/gradient bg: invert to white
-const LOGO_DARK: React.CSSProperties = { filter: "brightness(0) invert(1)", opacity: 0.88 };
 
 function ctaLabel(type: string): string {
   if (["1:1 Begleitung", "Premium 1:1", "3-Monats-Premium"].includes(type)) return "Platz anfragen";
@@ -139,9 +137,6 @@ export default function App() {
         </div>
         <div className="relative z-10 -mt-32 px-6 pb-16 text-center max-w-lg mx-auto">
           <FadeUp>
-            <div className="flex justify-center mb-5">
-              <ImageWithFallback src={logoSabrina} alt="MUTSeeLe" className="h-12 w-auto object-contain opacity-90" style={{}} />
-            </div>
             <h1 style={D} className="text-[2.8rem] font-light leading-[1.15] text-foreground mb-5">
               Angst beginnt<br />im Kopf —{" "}
               <em className="italic not-italic font-semibold" style={GT}>MUT auch.</em>
@@ -169,7 +164,6 @@ export default function App() {
           <div aria-hidden className="absolute -top-32 -right-32 w-96 h-96 rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)" }} />
 
           <FadeUp>
-            <ImageWithFallback src={logoSabrina} alt="MUTSeeLe" className="h-14 w-auto object-contain mb-10" style={LOGO_DARK} />
             <h1 style={D} className="text-[clamp(3rem,4.5vw,5rem)] font-light leading-[1.1] text-white mb-6">
               Angst beginnt<br />im Kopf —<br />
               <em className="italic opacity-85">MUT auch.</em>
@@ -614,7 +608,7 @@ export default function App() {
       <footer className="px-6 py-14" style={{ background: "var(--foreground)" }}>
         <div className="max-w-lg mx-auto lg:max-w-4xl lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-16 lg:items-start">
           <div className="mb-8 lg:mb-0">
-            <ImageWithFallback src={logoSabrina} alt="MUTSeeLe by Sabrina Wenzl" className="h-10 w-auto object-contain mb-4" style={LOGO_DARK} />
+            <ImageWithFallback src={logoSabrina} alt="MUTSeeLe by Sabrina Wenzl" className="h-10 w-auto object-contain mb-4" />
             <p className="text-background/45 text-xs leading-relaxed max-w-[180px]">Spirituelles &amp; emotionales Coaching für Frauen, Mütter und Kinder.</p>
           </div>
 
