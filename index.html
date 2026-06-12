@@ -1,22 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Mobile-first Landingpage Design</title>
-      <meta name="description" content="Bietet eine warme, feminine Landingpage für spirituelles Coaching, die Frauen, Mütter und Kinder emotional anspricht und hochwertige digitale Produkte präsentiert." />
-      <meta name="robots" content="noindex, nofollow" />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-      
-    </head>
+    <!-- ════════════════════════════════════════════════════════════════════
+         ⚠️  PLATZHALTER: Vor dem Livegang ersetzen!
+         · DOMAIN          → echte Domain (überall "https://www.mutseele.at")
+         · OG-IMAGE        → 1200×630px Bild unter <domain>/og-image.jpg hosten
+         · Social-Links    → echte Instagram-URL in JSON-LD "sameAs"
+    ═════════════════════════════════════════════════════════════════════ -->
 
-    <body>
-      
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-      
-    </body>
-  </html>
-  
+    <title>Spirituelles &amp; emotionales Coaching für Frauen &amp; Kinder | MUTSeeLe – Sabrina Wenzl</title>
+    <meta name="description" content="Spirituelles &amp; emotionales Coaching für Frauen, Mütter und Kinder. Workbooks, Programme &amp; persönliche 1:1-Begleitung – mit Human Design &amp; Numerologie. Angst beginnt im Kopf – MUT auch." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Sabrina Wenzl" />
+    <link rel="canonical" href="https://www.mutseele.at/" />
+    <meta name="theme-color" content="#E01F5A" />
+
+    <!-- Favicon (inline, hält den Single-File-Build self-contained) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRTAxRjVBIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRjQ3ODIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9InVybCgjZykiLz48dGV4dCB4PSIzMiIgeT0iNDUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjQwIiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NPC90ZXh0Pjwvc3ZnPg==" />
+
+    <!-- Open Graph (Facebook / Instagram / WhatsApp Link-Previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MUTSeeLe" />
+    <meta property="og:locale" content="de_AT" />
+    <meta property="og:title" content="Spirituelles &amp; emotionales Coaching für Frauen &amp; Kinder | MUTSeeLe" />
+    <meta property="og:description" content="Erschöpft davon, immer für alle da zu sein – außer für dich selbst? Workbooks, Programme &amp; persönliche Begleitung für Frauen, Mütter und Kinder." />
+    <meta property="og:url" content="https://www.mutseele.at/" />
+    <meta property="og:image" content="https://www.mutseele.at/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MUTSeeLe by Sabrina Wenzl – Coaching für Frauen &amp; Kinder" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Spirituelles &amp; emotionales Coaching für Frauen &amp; Kinder | MUTSeeLe" />
+    <meta name="twitter:description" content="Erschöpft davon, immer für alle da zu sein – außer für dich selbst? Hier darfst du endlich ankommen." />
+    <meta name="twitter:image" content="https://www.mutseele.at/og-image.jpg" />
+
+    <!-- ════════ Structured Data (JSON-LD) ════════ -->
+
+    <!-- Person / Marke -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://www.mutseele.at/#business",
+      "name": "MUTSeeLe by Sabrina Wenzl",
+      "description": "Spirituelles & emotionales Coaching für Frauen, Mütter und Kinder – mit Human Design, Numerologie und Energiearbeit.",
+      "url": "https://www.mutseele.at/",
+      "image": "https://www.mutseele.at/og-image.jpg",
+      "founder": {
+        "@type": "Person",
+        "name": "Sabrina Wenzl",
+        "jobTitle": "Spirituelle & emotionale Coachin"
+      },
+      "areaServed": "DACH",
+      "knowsLanguage": "de",
+      "sameAs": [
+        "https://www.instagram.com/DEIN_INSTAGRAM_HANDLE"
+      ]
+    }
+    </script>
+
+    <!-- Website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "MUTSeeLe",
+      "url": "https://www.mutseele.at/",
+      "inLanguage": "de"
+    }
+    </script>
+
+    <!-- FAQ – kann als Rich Result direkt in Google erscheinen -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ist MUTSeeLe das Richtige für mich?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Wenn du das Gefühl hast, irgendwo festzustecken – ob als Mutter, als Frau, spirituell oder im Alltag – dann bist du hier richtig. Ich begleite Menschen, die bereit sind, ehrlich hinzuschauen und sich selbst wieder nahezukommen." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie läuft eine 1:1-Session ab?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten per Video-Call (ca. 60–90 Minuten). Ich kombiniere Gespräch, Energiearbeit und je nach Bedarf Elemente aus Human Design oder Numerologie. Nach jeder Session bekommst du persönliche Impulse und Übungen." }
+        },
+        {
+          "@type": "Question",
+          "name": "Muss ich spirituell offen oder erfahren sein?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nein – du brauchst keine Vorkenntnisse. Ich begegne dir dort, wo du gerade bist. Ob du zum ersten Mal über dich nachdenkst oder schon länger auf dem Weg bist: alle sind willkommen." }
+        },
+        {
+          "@type": "Question",
+          "name": "Was, wenn ich keine Ergebnisse sehe?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Echte Veränderung braucht Zeit und Ehrlichkeit mit sich selbst. Ich begleite dich dabei, aber der Weg gehört dir. Wenn du das Gefühl hast, dass etwas nicht passt, sprechen wir offen darüber – das ist mein Versprechen." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie bekomme ich mein Gratis-Freebie?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Einfach deine E-Mail-Adresse im Freebie-Bereich eingeben – du bekommst die Atemreise sofort in dein Postfach. Schau auch im Spam-Ordner nach, falls du nichts siehst." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie schnell sehe ich erste Veränderungen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Viele Frauen beschreiben schon nach der ersten Session oder den ersten Tagen mit einem Workbook ein Gefühl von Leichtigkeit und Klarheit. Tiefere Transformation entfaltet sich über Wochen – aber du merkst sie." }
+        }
+      ]
+    }
+    </script>
+
+    <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

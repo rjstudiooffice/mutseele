@@ -52,19 +52,12 @@ const PRODUCTS = {
     { emoji: "🔥", tagline: "4 Wochen, die dein Leben verändern.",        title: "Emotionale Heilung — Intensiv-Begleitung",      desc: "Tiefgehende 4-Wochen-Begleitung mit wöchentlichen Calls, persönlichem Workbook und Energiearbeit. Für Frauen, die bereit sind.",          price: "145 €", type: "4-Wochen-Programm",  tag: "Beliebt",      spots: "Noch 3 Plätze im Juli" },
     { emoji: "💫", tagline: "Wer bist du wirklich?",                      title: "Persönliche Selbstfindungs-Reise",               desc: "Die intensive 1:1-Begleitung für Frauen, die tief gehen wollen. Seele, Energie, Identität — alles in einem geschützten Raum.",              price: "355 €", type: "Premium 1:1",        tag: "Tiefste Ebene",spots: "Nur noch 1 Platz" },
   ],
-  spiritual: [
-    { emoji: "🔮", tagline: "Deine Blaupause wartet auf dich.",           title: "Human Design Reading",              desc: "Verstehe deine Energie, deinen Typ und deine einzigartige Strategie. Ein tiefes persönliches Reading von Sabrina — nur für dich.",                        price: "145 €", type: "Persönliches Reading",   tag: "Empfohlen",  spots: "" },
-    { emoji: "🌙", tagline: "Deine Zahl erzählt deine Geschichte.",       title: "Geburtszahlen-Analyse",             desc: "Eine tiefe numerologische Analyse deiner Lebenszahl, Seelenzahl und deines Jahreszyklus — als PDF und Audio-Aufnahme.",                                 price: "45 €",  type: "Analyse (PDF + Audio)",  tag: "",           spots: "" },
-    { emoji: "✨", tagline: "Lass die Karten sprechen.",                   title: "Spirituelles Kartenset für Frauen", desc: "36 Karten mit energetischen Impulsen, Seelenbotschaften und Affirmationen für deinen täglichen spirituellen Moment.",                                    price: "14 €",  type: "Kartenset (PDF)",        tag: "Beliebt",    spots: "" },
-    { emoji: "🕊️", tagline: "Tiefe Transformation beginnt innen.",        title: "Energetische Premium-Begleitung",   desc: "Das intensivste Angebot. 3 Monate tiefe Energie- und Seelenarbeit. Human Design, Geburtszahlen, Pendeln und 1:1-Sessions.",                              price: "555 €", type: "3-Monats-Premium",       tag: "Intensivst", spots: "Nur noch 2 Plätze" },
-  ],
 };
 
-type Category = "kinder" | "frauen" | "spiritual";
+type Category = "kinder" | "frauen";
 const CATEGORY_META: Record<Category, { label: string; short: string; emoji: string }> = {
-  kinder:    { label: "Kinder & Lernen",        short: "Kinder",        emoji: "🌿" },
-  frauen:    { label: "Frauen & Selbstfindung",  short: "Frauen",        emoji: "🌸" },
-  spiritual: { label: "Spiritualität & Energie", short: "Spiritualität", emoji: "✨" },
+  kinder: { label: "Kinder verstehen & stärken",  short: "Kinder",  emoji: "🌿" },
+  frauen: { label: "Dich selbst verstehen & entfalten", short: "Frauen", emoji: "🌸" },
 };
 
 type FreebieForm = { email: string };
@@ -201,7 +194,7 @@ export default function App() {
             <span className="text-muted-foreground text-xs hidden sm:block">·</span>
             <span className="text-foreground/70 text-xs" style={B}><strong className="text-foreground">5 Jahre</strong> Erfahrung</span>
             <span className="text-muted-foreground text-xs hidden sm:block">·</span>
-            <span className="text-foreground/70 text-xs" style={B}><strong className="text-foreground">3</strong> Themenwelten</span>
+            <span className="text-foreground/70 text-xs" style={B}><strong className="text-foreground">2</strong> Themenwelten</span>
           </div>
         </FadeUp>
       </div>
@@ -227,14 +220,13 @@ export default function App() {
             <h2 style={D} className="text-[2rem] lg:text-[2.5rem] font-light text-center text-foreground mb-3 leading-snug">
               Wo darf ich dich <em className="italic" style={GT}>begleiten?</em>
             </h2>
-            <p className="text-center text-muted-foreground text-sm mb-10 max-w-xs mx-auto leading-relaxed">Drei Welten, ein Kern — dein Weg zurück zu dir.</p>
+            <p className="text-center text-muted-foreground text-sm mb-10 max-w-xs mx-auto leading-relaxed">Zwei Welten, ein Kern — dein Weg zurück zu dir.</p>
           </FadeUp>
 
-          <div className="flex flex-col gap-5 lg:grid lg:grid-cols-3 lg:gap-6">
+          <div className="flex flex-col gap-5 lg:grid lg:grid-cols-2 lg:gap-6 lg:max-w-2xl lg:mx-auto">
             {[
-              { emoji: "🌿", title: "Kinder & Lernen",        desc: "Sensible Kinder brauchen mehr als Lernstoff — sie brauchen emotionale Sicherheit, Leichtigkeit und jemanden, der sie wirklich sieht.",                      bg: "linear-gradient(135deg,#fce4ec 0%,#fde8d8 100%)", link: "Für Kinder & Mamas entdecken" },
-              { emoji: "🌸", title: "Frauen & Selbstfindung", desc: "Du hast so lange für alle anderen funktioniert. Jetzt ist es Zeit, dich selbst zu fragen: Wer bin ich eigentlich wirklich?",                              bg: "linear-gradient(135deg,#fde8d8 0%,#fce4ec 100%)", link: "Mein Weg als Frau" },
-              { emoji: "✨", title: "Spiritualität & Energie", desc: "Human Design, Geburtszahlen, Energiearbeit — Werkzeuge, die dich tiefer mit dir selbst verbinden und deinen Weg klären.",                                  bg: "linear-gradient(135deg,#fff3e0 0%,#fde8d8 100%)", link: "Spirituell erwachen" },
+              { emoji: "🌿", title: "Kinder verstehen & stärken",       desc: "Dein Kind ist einzigartig — nicht schwierig. Wenn du weißt, wie es wirklich funktioniert, verändert sich alles: der Schulalltag, der Schlaf, die Verbindung zwischen euch.",      bg: "linear-gradient(135deg,#fce4ec 0%,#fde8d8 100%)", link: "Für Kinder & Mamas entdecken" },
+              { emoji: "🌸", title: "Dich selbst verstehen & entfalten", desc: "Du hast so lange für alle anderen funktioniert. Jetzt ist es Zeit, dich selbst wirklich zu sehen — deine Energie, deine Zahlen, dein einzigartiger Seelenplan.",                    bg: "linear-gradient(135deg,#fde8d8 0%,#fce4ec 100%)", link: "Mein Weg als Frau" },
             ].map((item, i) => (
               <FadeUp key={item.title} delay={i * 0.08}>
                 <div className="rounded-[1.5rem] p-7 border cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg h-full" style={{ background: item.bg, borderColor: "rgba(224,31,90,0.14)" }}>
