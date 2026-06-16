@@ -28,7 +28,7 @@ import { bundles } from "./data/bundles";
 import { leadMagnets } from "./data/leadMagnets";
 import { testimonials } from "./data/testimonials";
 import { quiz, quizOutcomes } from "./data/quiz";
-import { recommendations } from "./data/recommendations";
+import { recommendations, bundleRecommendations } from "./data/recommendations";
 
 export { worlds, categories, families, products, bundles, leadMagnets, testimonials, quiz, quizOutcomes };
 
@@ -79,6 +79,12 @@ export const getBundle = (id: string): Bundle | undefined => bundleById.get(id);
 
 export const getBundlesByWorld = (worldId: string): Bundle[] =>
   bundles.filter((b) => b.worldId === worldId);
+
+/** Startseiten-Bundles in Premium-Reihenfolge (homeOrder aufsteigend). */
+export const getHomeBundles = (): Bundle[] =>
+  bundles
+    .filter((b) => b.homeOrder != null)
+    .sort((a, b) => (a.homeOrder ?? 0) - (b.homeOrder ?? 0));
 
 /** Ersparnis eines Bundles ggü. Einzelkauf (für UI-Badge). */
 export const bundleSavings = (bundle: Bundle): number => {
@@ -138,6 +144,16 @@ export function validateContent(): string[] {
     });
     if (!b.tentary?.productId || !b.tentary?.checkoutUrl)
       errors.push(`Bundle ${b.id} → Tentary unvollständig (productId/checkoutUrl)`);
+    const brecs = bundleRecommendations[b.id];
+    if (!brecs) {
+      errors.push(`Bundle ${b.id} → keine Empfehlungen definiert`);
+    } else {
+      if (brecs.length !== 3) errors.push(`Bundle ${b.id} → genau 3 Empfehlungen erwartet, ${brecs.length} gefunden`);
+      brecs.forEach((rid) => {
+        if (!productIds.has(rid)) errors.push(`Bundle ${b.id} → unbekanntes Produkt ${rid}`);
+        if (b.productIds.includes(rid)) errors.push(`Bundle ${b.id} → empfiehlt enthaltenes Produkt ${rid}`);
+      });
+    }
   }
 
   for (const l of leadMagnets) {

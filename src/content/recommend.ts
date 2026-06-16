@@ -1,9 +1,28 @@
-import type { Product, QuizOutcome } from "./types";
+import type { Product, Bundle, QuizOutcome } from "./types";
 import { products } from "./data/products";
 import { quizOutcomes } from "./data/quiz";
-import { recommendations } from "./data/recommendations";
+import { recommendations, bundleRecommendations } from "./data/recommendations";
 
 const productById = new Map(products.map((p) => [p.id, p]));
+
+// Hero-Produkte dürfen überdurchschnittlich häufig empfohlen werden. Bei
+// gleichwertigem Fallback werden sie bevorzugt angezeigt → klare Produktleiter.
+const HERO_PRODUCT_IDS = new Set([
+  "hd-master-guide-kids",
+  "betriebsanleitung-kind",
+  "bewegung-vernetzung",
+  "hd-master-guide-erwachsene",
+  "geburtsdatenanalyse",
+  "seelenstark-videokurs",
+]);
+
+/** Produkte einer Welt, Hero-Produkte zuerst (für den Auffüll-Fallback). */
+function sameWorldHeroFirst(worldId: string | undefined): Product[] {
+  if (!worldId) return [];
+  return products
+    .filter((p) => p.worldId === worldId && !p.disabled)
+    .sort((a, b) => Number(HERO_PRODUCT_IDS.has(b.id)) - Number(HERO_PRODUCT_IDS.has(a.id)));
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // „Das könnte dich ebenfalls begleiten“
@@ -13,7 +32,7 @@ const productById = new Map(products.map((p) => [p.id, p]));
 // Deterministisch, keine Zufallslogik, keine Selbstempfehlung.
 //
 // Regel 9: Ist ein empfohlenes Produkt deaktiviert/fehlend, rückt automatisch
-// das nächste Produkt aus derselben Welt nach.
+// das nächste Produkt aus derselben Welt nach (Hero-Produkte bevorzugt).
 // ─────────────────────────────────────────────────────────────────────────────
 export function getRecommendations(product: Product, limit = 3): Product[] {
   const out: Product[] = [];
@@ -30,13 +49,31 @@ export function getRecommendations(product: Product, limit = 3): Product[] {
   // 1) Kuratierte Empfehlungen in Reihenfolge.
   (recommendations[product.id] ?? []).forEach(push);
 
-  // 2) Auffüllen aus derselben Welt (Regel 9), bis `limit` erreicht ist.
-  if (out.length < limit) {
-    for (const p of products) {
-      if (p.worldId === product.worldId) push(p.id);
-      if (out.length >= limit) break;
-    }
-  }
+  // 2) Auffüllen aus derselben Welt (Regel 9), Hero-Produkte zuerst.
+  if (out.length < limit) sameWorldHeroFirst(product.worldId).forEach((p) => push(p.id));
+
+  return out;
+}
+
+/**
+ * „Das könnte dich ebenfalls begleiten“ für ein Bundle. Genau `limit` Produkte,
+ * niemals ein Produkt, das bereits im Bundle enthalten ist (oder deaktiviert ist).
+ */
+export function getBundleRecommendations(bundle: Bundle, limit = 3): Product[] {
+  const out: Product[] = [];
+  // Bereits enthaltene Produkte vorab als „gesehen“ → werden nie empfohlen.
+  const seen = new Set<string>(bundle.productIds);
+
+  const push = (id: string) => {
+    if (out.length >= limit || seen.has(id)) return;
+    const p = productById.get(id);
+    if (!p || p.disabled) return;
+    seen.add(id);
+    out.push(p);
+  };
+
+  (bundleRecommendations[bundle.id] ?? []).forEach(push);
+  if (out.length < limit) sameWorldHeroFirst(bundle.worldId).forEach((p) => push(p.id));
 
   return out;
 }

@@ -210,6 +210,8 @@ export interface Bundle {
   worldId?: Id;
   familyId?: ProductFamilyId;
   badge?: ProductBadge;
+  /** Reihenfolge auf der Startseite (kleiner = prominenter). Ungesetzt = nicht auf Startseite. */
+  homeOrder?: number;
   tentary?: TentaryRef;
   seo?: Seo;
 }

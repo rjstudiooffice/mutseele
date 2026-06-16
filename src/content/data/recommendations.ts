@@ -36,3 +36,13 @@ export const recommendations: Record<string, string[]> = {
   // ── Welt 3 · Pädagogen ─────────────────────────────────────────────────────
   "mentale-magie-schulalltag": ["bewegung-vernetzung", "hd-master-guide-kids", "schulstress-verstehen"],
 };
+
+// Empfehlungen für Bundles. Gleiche Regeln + zusätzlich: niemals ein Produkt
+// empfehlen, das bereits im Bundle enthalten ist (siehe getBundleRecommendations).
+export const bundleRecommendations: Record<string, string[]> = {
+  "bundle-hd-kids-komplett": ["bewegung-vernetzung", "schlaf-guide", "seelenstark-kind"],
+  "bundle-hd-erwachsene-komplett": ["seelenstark-videokurs", "seelenstark-erwachsene", "seelenkompass-monatsimpuls"],
+  "bundle-seelenstark": ["geburtsdatenanalyse", "hd-master-guide-erwachsene", "hd-master-guide-kids"],
+  "bundle-lernen-regulation": ["betriebsanleitung-kind", "hd-master-guide-kids", "seelenstark-kind"],
+  "bundle-mamastart": ["bewegung-vernetzung", "schlaf-guide", "hd-master-guide-kids"],
+};

@@ -5,8 +5,9 @@ import { Link } from "react-router";
 import { ArrowRight, Download, Star, Heart, Sparkles, CheckCircle } from "lucide-react";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/app/components/ui/accordion";
-import sabrinavPhoto from "@/imports/Sabrina.png";
-import { getMainWorlds, getProductsByWorld, getTestimonials, getFeaturedLeadMagnet, getProduct } from "@/content";
+import sabrinavPhoto from "@/imports/hero.jpeg";
+import sabrinaAbout from "@/imports/sabrina-about.jpeg";
+import { getMainWorlds, getProductsByWorld, getTestimonials, getFeaturedLeadMagnet, getProduct, getHomeBundles, bundleSavings } from "@/content";
 import { D, B, G, GS, GT, FadeUp } from "./shared/brand";
 import { SiteNav, SiteFooter } from "./shared/SiteChrome";
 import { ProductCard, SignatureCard } from "./shared/ProductCard";
@@ -15,6 +16,7 @@ import { ProductCard, SignatureCard } from "./shared/ProductCard";
 const MAIN_WORLDS = getMainWorlds();
 const TESTIMONIALS = getTestimonials();
 const FEATURED_FREEBIE = getFeaturedLeadMagnet();
+const HOME_BUNDLES = getHomeBundles();
 // Wechselnde Kachel-Hintergründe (reine Darstellung).
 const TESTI_BG = [
   "linear-gradient(135deg,#fce4ec 0%,#fde8d8 100%)",
@@ -253,6 +255,44 @@ export default function App() {
         </div>
       </section>
 
+      {/* ══ BUNDLES ══════════════════════════════════════════════════════════ */}
+      <section id="bundles" className="px-6 py-16 lg:py-24 bg-background">
+        <div className="max-w-lg mx-auto lg:max-w-5xl">
+          <FadeUp>
+            <span className="block text-[10px] tracking-[0.35em] uppercase font-medium mb-3 text-center" style={{ color: "#E01F5A" }}>Spar-Pakete</span>
+            <h2 style={D} className="text-[2rem] lg:text-[2.5rem] font-light text-center text-foreground mb-2 leading-snug">
+              Zusammen <em className="italic" style={GT}>tiefer gehen</em>
+            </h2>
+            <p className="text-center text-muted-foreground text-sm mb-10 max-w-sm mx-auto leading-relaxed">Unsere stärksten Angebote — als Paket spürbar günstiger.</p>
+          </FadeUp>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            {HOME_BUNDLES.map((b, i) => (
+              <FadeUp key={b.id} delay={i * 0.08}>
+                <Link
+                  to={`/bundle/${b.id}`}
+                  className="flex flex-col h-full rounded-[1.5rem] p-7 border bg-card transition-all duration-300 hover:scale-[1.015] hover:shadow-lg"
+                  style={{ borderColor: "rgba(224,31,90,0.18)" }}
+                >
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-medium mb-3">Bundle · {b.productIds.length} Produkte</span>
+                  <h3 style={D} className="text-[1.3rem] font-medium text-foreground mb-2 leading-snug">{b.title}</h3>
+                  <p className="text-sm italic font-light mb-6 flex-1" style={{ color: "#E01F5A" }}>{b.tagline}</p>
+                  {b.price.compareAt && (
+                    <p className="text-xs text-muted-foreground mb-0.5">Einzelpreis <span className="line-through">{b.price.compareAt} €</span></p>
+                  )}
+                  <div className="flex items-baseline justify-between">
+                    <span style={D} className="text-[1.7rem] font-light text-foreground">{b.price.amount} €</span>
+                    {bundleSavings(b) > 0 && (
+                      <span className="text-[11px] font-semibold px-2.5 py-1 rounded-full text-white" style={{ background: G }}>−{bundleSavings(b)} €</span>
+                    )}
+                  </div>
+                </Link>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ══ ÜBER SABRINA ═════════════════════════════════════════════════════ */}
       <section id="sabrina" className="bg-background overflow-hidden">
         <div className="max-w-lg mx-auto lg:max-w-none">
@@ -262,7 +302,7 @@ export default function App() {
             <div className="relative lg:order-2" style={{ height: "72vw", maxHeight: "500px" }}>
               <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(160deg,#fce4ec 0%,#fde8d8 100%)" }} />
               <ImageWithFallback
-                src={sabrinavPhoto} alt="Sabrina Wenzl"
+                src={sabrinaAbout} alt="Sabrina Wenzl"
                 className="w-full h-full object-cover object-top relative z-10"
                 style={{ mixBlendMode: "multiply", opacity: 0.88 }}
               />
