@@ -1,0 +1,4 @@
+# SPA-Fallback (Netlify): jede unbekannte Route liefert index.html,
+# damit Deep-Links wie /produkt/hd-master-guide-kids clientseitig routen.
+# Vercel-Äquivalent: vercel.json → { "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }
+/*    /index.html    200
