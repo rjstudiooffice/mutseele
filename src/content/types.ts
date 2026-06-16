@@ -154,6 +154,8 @@ export interface Product {
   emoji?: string;
   image?: string;
   badge?: ProductBadge;
+  /** Deaktiviert: nicht kaufbar; fällt aus Empfehlungen heraus (Regel 9). */
+  disabled?: boolean;
   /** Knappheits-Hinweis, z. B. „Nur noch 2 Plätze“. */
   scarcity?: string;
   featured?: boolean;

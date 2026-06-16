@@ -28,6 +28,7 @@ import { bundles } from "./data/bundles";
 import { leadMagnets } from "./data/leadMagnets";
 import { testimonials } from "./data/testimonials";
 import { quiz, quizOutcomes } from "./data/quiz";
+import { recommendations } from "./data/recommendations";
 
 export { worlds, categories, families, products, bundles, leadMagnets, testimonials, quiz, quizOutcomes };
 
@@ -157,6 +158,15 @@ export function validateContent(): string[] {
   for (const t of testimonials) {
     if (t.worldId && !worldIds.has(t.worldId)) errors.push(`Testimonial ${t.id} → unbekannte Welt ${t.worldId}`);
     if (t.productId && !productIds.has(t.productId)) errors.push(`Testimonial ${t.id} → unbekanntes Produkt ${t.productId}`);
+  }
+
+  for (const [id, recs] of Object.entries(recommendations)) {
+    if (!productIds.has(id)) errors.push(`Empfehlungen → unbekanntes Produkt ${id}`);
+    if (recs.length !== 3) errors.push(`Empfehlungen ${id} → genau 3 erwartet, ${recs.length} gefunden`);
+    recs.forEach((rid) => {
+      if (!productIds.has(rid)) errors.push(`Empfehlungen ${id} → unbekanntes Produkt ${rid}`);
+      if (rid === id) errors.push(`Empfehlungen ${id} → Selbstempfehlung nicht erlaubt`);
+    });
   }
 
   for (const o of quizOutcomes) {

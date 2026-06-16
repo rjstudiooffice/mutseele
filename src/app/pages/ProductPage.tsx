@@ -1,14 +1,7 @@
 import { useParams, Link } from "react-router";
-import { ArrowRight, Check, Sparkles } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 import type { Method } from "@/content";
-import {
-  getProduct,
-  getWorld,
-  getCategory,
-  getFamily,
-  getProductsByFamily,
-  relatedProducts,
-} from "@/content";
+import { getProduct, getWorld, getCategory, getRecommendations } from "@/content";
 import { D, G, GS, GT, FadeUp, FORMAT_LABEL, BADGE_LABEL, formatPrice, ctaLabel, useDocumentMeta } from "../shared/brand";
 import { PageShell, Breadcrumb } from "../shared/Layout";
 import { ProductCard } from "../shared/ProductCard";
@@ -43,10 +36,7 @@ export default function ProductPage() {
 
   const world = getWorld(p.worldId);
   const category = getCategory(p.categoryId);
-  const family = p.familyId ? getFamily(p.familyId) : undefined;
-  const familyProducts = p.familyId ? getProductsByFamily(p.familyId).filter((x) => x.id !== p.id) : [];
-  const nextStep = p.nextStepProductId ? getProduct(p.nextStepProductId) : undefined;
-  const related = relatedProducts(p).map((r) => r.product);
+  const recommendations = getRecommendations(p, 3);
   const isSignature = p.tier === "signature";
 
   return (
@@ -184,49 +174,25 @@ export default function ProductPage() {
             </FadeUp>
           )}
 
-          {/* Nächster Schritt (Werttreppe) */}
-          {nextStep && (
-            <FadeUp>
-              <Link to={`/produkt/${nextStep.id}`} className="block rounded-2xl p-6 border transition-colors hover:bg-white/60" style={{ borderColor: "rgba(224,31,90,0.2)", background: GS }}>
-                <p className="text-[10px] uppercase tracking-[0.25em] font-semibold mb-2" style={{ color: "#E01F5A" }}>Dein nächster Schritt</p>
-                <div className="flex items-center justify-between gap-4">
-                  <div>
-                    <h3 style={D} className="text-[1.15rem] font-medium text-foreground leading-snug">{nextStep.title}</h3>
-                    <p className="text-sm text-muted-foreground">{nextStep.tagline}</p>
-                  </div>
-                  <ArrowRight size={18} style={{ color: "#E01F5A" }} className="flex-shrink-0" />
-                </div>
-              </Link>
-            </FadeUp>
-          )}
         </div>
       </section>
 
-      {/* Produktfamilie */}
-      {family && familyProducts.length > 0 && (
+      {/* Einziger Empfehlungsbereich · genau 3, kuratiert, keine Funnel-Begriffe */}
+      {recommendations.length > 0 && (
         <section className="px-6 py-14 lg:py-20" style={{ background: GS }}>
           <div className="max-w-lg mx-auto lg:max-w-5xl">
             <FadeUp>
-              <span className="block text-[10px] tracking-[0.35em] uppercase font-medium mb-2" style={{ color: "#E01F5A" }}>{family.title}</span>
-              <h2 style={D} className="text-[1.6rem] lg:text-[2rem] font-light text-foreground mb-3 leading-snug">Gehört <em className="italic" style={GT}>zusammen</em></h2>
-              <p className="text-muted-foreground text-sm mb-7 max-w-xl">{family.description}</p>
+              <h2 style={D} className="text-[1.6rem] lg:text-[2rem] font-light text-foreground mb-8 leading-snug text-center">
+                Das könnte dich <em className="italic" style={GT}>ebenfalls begleiten</em>
+              </h2>
             </FadeUp>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              {familyProducts.map((fp, i) => <ProductCard key={fp.id} p={fp} index={i} />)}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Passt dazu (Empfehlungs-Engine) */}
-      {related.length > 0 && (
-        <section className="px-6 py-14 lg:py-20 bg-background">
-          <div className="max-w-lg mx-auto lg:max-w-5xl">
-            <FadeUp>
-              <h2 style={D} className="text-[1.6rem] lg:text-[2rem] font-light text-foreground mb-7 leading-snug text-center">Passt <em className="italic" style={GT}>dazu</em></h2>
-            </FadeUp>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              {related.map((rp, i) => <ProductCard key={rp.id} p={rp} index={i} />)}
+            {/* Mobil: horizontale Cards (Scroll). Desktop: 3-spaltiges Raster. */}
+            <div className="flex gap-4 overflow-x-auto pb-2 -mx-6 px-6 snap-x lg:grid lg:grid-cols-3 lg:overflow-visible lg:mx-0 lg:px-0">
+              {recommendations.map((rp, i) => (
+                <div key={rp.id} className="min-w-[78%] sm:min-w-[20rem] lg:min-w-0 snap-start">
+                  <ProductCard p={rp} index={i} />
+                </div>
+              ))}
             </div>
           </div>
         </section>

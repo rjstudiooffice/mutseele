@@ -1,6 +1,45 @@
 import type { Product, QuizOutcome } from "./types";
 import { products } from "./data/products";
 import { quizOutcomes } from "./data/quiz";
+import { recommendations } from "./data/recommendations";
+
+const productById = new Map(products.map((p) => [p.id, p]));
+
+// ─────────────────────────────────────────────────────────────────────────────
+// „Das könnte dich ebenfalls begleiten“
+//
+// Die EINZIGE Empfehlungsfunktion für Produktseiten. Liefert genau `limit`
+// Produkte (Standard 3) aus der kuratierten Matrix, in fester Reihenfolge.
+// Deterministisch, keine Zufallslogik, keine Selbstempfehlung.
+//
+// Regel 9: Ist ein empfohlenes Produkt deaktiviert/fehlend, rückt automatisch
+// das nächste Produkt aus derselben Welt nach.
+// ─────────────────────────────────────────────────────────────────────────────
+export function getRecommendations(product: Product, limit = 3): Product[] {
+  const out: Product[] = [];
+  const seen = new Set<string>([product.id]);
+
+  const push = (id: string) => {
+    if (out.length >= limit || seen.has(id)) return;
+    const p = productById.get(id);
+    if (!p || p.disabled) return;
+    seen.add(id);
+    out.push(p);
+  };
+
+  // 1) Kuratierte Empfehlungen in Reihenfolge.
+  (recommendations[product.id] ?? []).forEach(push);
+
+  // 2) Auffüllen aus derselben Welt (Regel 9), bis `limit` erreicht ist.
+  if (out.length < limit) {
+    for (const p of products) {
+      if (p.worldId === product.worldId) push(p.id);
+      if (out.length >= limit) break;
+    }
+  }
+
+  return out;
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // EMPFEHLUNGS-ENGINE
