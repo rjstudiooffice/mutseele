@@ -331,9 +331,6 @@ export default function App() {
                     </div>
                   ))}
                 </div>
-                <button className="flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all duration-300" style={{ color: "#E01F5A" }}>
-                  Meine Geschichte lesen <ArrowRight size={13} />
-                </button>
               </FadeUp>
             </div>
           </div>
