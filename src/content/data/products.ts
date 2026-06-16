@@ -21,13 +21,66 @@ export const products: Product[] = [
     worldId: "kinder-verstehen-staerken",
     familyId: "human-design",
     title: "Human Design Master Guide · Kids",
+    subtitle: "Die komplette Human Design Betriebsanleitung für Kinder",
     tagline: "Verstehe dein Kind tiefer, als Worte es je könnten.",
     problem:
-      "Du spürst, dass dein Kind anders tickt — aber niemand erklärt dir, wie und warum.",
+      "Du spürst, dass dein Kind einzigartig ist — aber dir fehlt das Verständnis dafür, warum es so reagiert, fühlt, lernt und handelt.",
     outcome:
-      "Du kannst die Charts deines Kindes selbst lesen und seine Natur, Stärken und Bedürfnisse einordnen.",
+      "Du verstehst Human Design wirklich und kannst Kindercharts eigenständig lesen und interpretieren.",
     description:
-      "Ein umfangreiches Referenz- und Praxishandbuch — eine Ausbildung im Buchformat. Nach dem Durcharbeiten verstehst du die Sprache deines Kindes und kannst Kindercharts eigenständig interpretieren. Kein E-Book, kein Workbook: ein Nachschlagewerk fürs Leben.",
+      "Ein umfassendes Referenz-, Nachschlage- und Praxishandbuch, das dir hilft, Human Design wirklich zu verstehen und im Familienalltag anzuwenden. Kein gewöhnliches E-Book.",
+    longDescription: [
+      {
+        body: [
+          "Manche Kinder brauchen ständig Bewegung. Andere ziehen sich zurück. Manche schlafen schlecht, stellen tausend Fragen oder scheinen die Welt intensiver wahrzunehmen als andere.",
+          "Viele Eltern spüren intuitiv, dass ihr Kind einzigartig ist. Doch oft fehlt das Verständnis dafür, warum ihr Kind so reagiert, fühlt, lernt oder handelt. Genau hier beginnt Human Design.",
+          "Der Human Design Master Guide Kids wurde entwickelt, um Eltern, Pädagogen und Begleitern ein tiefes Verständnis für Kinder und ihre individuellen Bedürfnisse zu ermöglichen.",
+        ],
+      },
+      {
+        heading: "Mehr als ein Buch. Mehr als ein Chart.",
+        body: [
+          "Dieses Werk ist kein gewöhnliches E-Book. Es ist ein umfassendes Referenzwerk, Nachschlagewerk und Praxishandbuch, das dir dabei hilft, Human Design wirklich zu verstehen und im Alltag anzuwenden.",
+          "Während viele Human Design Bücher bei theoretischem Wissen enden, zeigt dir dieser Guide die praktische Umsetzung. Du lernst nicht nur, was ein Typ, ein Profil oder eine Autorität bedeutet — du lernst, wie sich diese Eigenschaften im Familienalltag, beim Lernen, beim Schlafen, in Beziehungen und in der Entwicklung eines Kindes zeigen.",
+        ],
+      },
+      {
+        heading: "Das erwartet dich",
+        checklist: [
+          "Human Design Typen verstehen",
+          "Autoritäten sicher erkennen",
+          "Profile und Linien interpretieren",
+          "Zentren verstehen",
+          "Kanäle einordnen",
+          "Ernährung nach Human Design",
+          "Die passende Umgebung erkennen",
+          "Aktive und passive Gehirne verstehen",
+          "Schlaf und Regeneration",
+          "Lernen und Entwicklung",
+          "Praktische Umsetzung für den Alltag",
+        ],
+      },
+      {
+        heading: "Für wen ist dieser Guide geeignet?",
+        bullets: [
+          "Eltern",
+          "Großeltern",
+          "Lehrer",
+          "Pädagogen",
+          "Coaches",
+          "Human Design Interessierte",
+          "Menschen, die Kinder besser verstehen möchten",
+        ],
+      },
+      {
+        heading: "Das Ergebnis",
+        body: [
+          "Nach dem Durcharbeiten dieses Guides wirst du Human Design deutlich tiefer verstehen und Kindercharts eigenständig lesen und interpretieren können.",
+          "Du wirst Kinder nicht mehr durch die Brille von Erwartungen betrachten — sondern durch die Brille ihrer individuellen Anlagen.",
+        ],
+      },
+    ],
+    closing: ["Verstehen statt bewerten.", "Begleiten statt korrigieren.", "Stärken statt verbiegen."],
     price: eur(555),
     tier: "signature",
     format: "referenzwerk",
@@ -46,13 +99,48 @@ export const products: Product[] = [
     worldId: "kinder-verstehen-staerken",
     familyId: "human-design",
     title: "Persönliche Betriebsanleitung für dein Kind",
-    tagline: "Dein Kind — endlich verständlich, auf den Punkt.",
+    tagline: "Verstehe dein Kind. Begleite es bewusster.",
     problem:
-      "Du willst dein Kind verstehen, aber dir fehlt Zeit für ein ganzes Studium.",
+      "Nicht immer ist es leicht zu erkennen, was dein Kind wirklich braucht.",
     outcome:
-      "Du bekommst eine persönliche, sofort anwendbare Anleitung für genau dein Kind.",
+      "Du verstehst dein Kind besser und kannst es gezielt und bewusster begleiten.",
     description:
-      "Eine individuell erstellte Anleitung, die die Natur deines Kindes greifbar macht: Wie es entscheidet, was es stärkt, was es überfordert. Konkret, alltagsnah, sofort umsetzbar.",
+      "Eine individuelle Human Design Analyse für genau dein Kind — mit Chart, Auswertung, Alltagstipps und persönlichen Empfehlungen.",
+    longDescription: [
+      {
+        body: [
+          "Jedes Kind bringt seine eigene Energie, Persönlichkeit und Lebensweise mit. Doch nicht immer ist es leicht zu erkennen, was ein Kind wirklich braucht.",
+          "Diese individuelle Human Design Analyse hilft dir dabei, dein Kind besser zu verstehen und gezielt zu unterstützen.",
+        ],
+      },
+      {
+        heading: "Du erhältst",
+        checklist: [
+          "Persönliches Human Design Chart",
+          "Individuelle Auswertung",
+          "Alltagstipps",
+          "Sprachmemo",
+          "Tiroler Zahlenrad",
+          "Persönliche Empfehlungen",
+          "Seelenkrafttier",
+          "Umsetzungsideen",
+          "WhatsApp-Fragemöglichkeit",
+        ],
+      },
+      {
+        heading: "Das hilft dir dabei",
+        bullets: [
+          "Konflikte besser zu verstehen",
+          "Bedürfnisse früher zu erkennen",
+          "Stärken zu fördern",
+          "Herausforderungen leichter zu begleiten",
+        ],
+      },
+      {
+        heading: "Eine wertvolle Begleitung",
+        body: ["Für Eltern, die ihr Kind nicht verändern möchten. Sondern verstehen."],
+      },
+    ],
     price: eur(249),
     tier: "premium",
     format: "analyse",
@@ -94,13 +182,64 @@ export const products: Product[] = [
     worldId: "kinder-verstehen-staerken",
     familyId: "entwicklung-regulation",
     title: "Bewegung schafft Vernetzung",
-    tagline: "Wenn Bewegung das Lernen entriegelt.",
+    subtitle: "Vernetzung schafft Gleichgewicht",
+    tagline: "Eine starke Gehirnbasis ist das Fundament für ein starkes Kind.",
     problem:
-      "Dein Kind kann sich schwer konzentrieren und Lernen wird zum Kampf.",
+      "Konzentrationsprobleme, starke Emotionen, Unruhe oder Lernschwierigkeiten können Hinweise auf nicht vollständig integrierte Entwicklungsschritte sein.",
     outcome:
-      "Du verstehst die Verbindung von Bewegung, Gehirn und Lernen — und nutzt sie gezielt.",
+      "Du schaffst die Grundlage für dein Kind — du unterstützt Entwicklung, statt Symptome zu bekämpfen.",
     description:
-      "Ein fundiertes Praxisprogramm darüber, wie Bewegung neuronale Vernetzung und damit Konzentration, Lernen und Regulation fördert. Reich an umsetzbaren Übungen.",
+      "Ein Praxiskurs über alle 7 Gehirnentwicklungsstufen: wie Bewegung die Vernetzung im Gehirn fördert — mit Videoanleitungen, Übungen und Worksheets.",
+    longDescription: [
+      {
+        body: [
+          "Lernen beginnt nicht in der Schule. Es beginnt im Gehirn.",
+          "Viele Herausforderungen wie Konzentrationsprobleme, starke Emotionen, Unruhe, Unsicherheit oder Lernschwierigkeiten können Hinweise darauf sein, dass wichtige Entwicklungsschritte noch nicht vollständig integriert wurden. Genau hier setzt dieser Kurs an.",
+        ],
+      },
+      {
+        heading: "Warum Bewegung so wichtig ist",
+        body: [
+          "Die Entwicklung des Gehirns beginnt bereits vor der Geburt. Jede Bewegung unterstützt die Vernetzung von Milliarden Nervenzellen.",
+          "Werden bestimmte Entwicklungsschritte nicht vollständig durchlaufen, können sich später verschiedene Auffälligkeiten zeigen.",
+        ],
+      },
+      {
+        heading: "Der Kurs umfasst",
+        checklist: [
+          "Alle 7 Gehirnentwicklungsstufen",
+          "Videoanleitungen",
+          "Praktische Übungen",
+          "Worksheets",
+          "Schritt-für-Schritt Umsetzung",
+        ],
+      },
+      {
+        heading: "Mögliche Themen",
+        bullets: [
+          "Konzentration",
+          "Lernen",
+          "Emotionale Regulation",
+          "Selbstvertrauen",
+          "Körperwahrnehmung",
+          "Schulvorbereitung",
+        ],
+      },
+      {
+        heading: "Für wen ist der Kurs geeignet?",
+        bullets: [
+          "Vorschulkinder",
+          "Schulkinder",
+          "Kinder mit Konzentrationsschwierigkeiten",
+          "Kinder mit Lernproblemen",
+          "Familien, die präventiv fördern möchten",
+        ],
+      },
+      {
+        heading: "Das Ziel",
+        body: ["Die Grundlage schaffen. Nicht Symptome bekämpfen, sondern Entwicklung unterstützen."],
+      },
+    ],
     price: eur(349),
     tier: "premium",
     format: "programm",
@@ -160,12 +299,53 @@ export const products: Product[] = [
     worldId: "kinder-verstehen-staerken",
     familyId: "entwicklung-regulation",
     title: "Schlaf Guide für die ganze Familie",
-    tagline: "Endlich Nächte, die alle erholen.",
-    problem: "Die Nächte sind unruhig — und tagsüber fehlt allen die Kraft.",
+    tagline: "Verstehe, warum Schlaf nicht funktioniert — und was deinem Kind wirklich hilft.",
+    problem:
+      "Ihr habt schon vieles ausprobiert — neue Routinen, neue Methoden — und trotzdem funktioniert nichts dauerhaft.",
     outcome:
-      "Ihr findet als Familie in einen tragfähigen, ruhigeren Schlafrhythmus.",
+      "Du erkennst das Bedürfnis hinter dem Verhalten und bringst mehr Ruhe in den Familienalltag.",
     description:
-      "Ein ganzheitlicher Schlaf-Guide für die ganze Familie: Regulation, Rituale und Verständnis statt starrer Regeln.",
+      "Ein Schlaf-Guide für die ganze Familie, der Human Design mit praktischen Alltagserfahrungen verbindet — und zeigt, warum Kinder unterschiedlich schlafen.",
+    longDescription: [
+      {
+        body: [
+          "Schlafmangel belastet die ganze Familie. Viele Eltern haben bereits alles ausprobiert: neue Routinen, neue Schlafmethoden, neue Tipps. Und trotzdem scheint nichts dauerhaft zu funktionieren.",
+        ],
+      },
+      {
+        heading: "Vielleicht liegt das Problem nicht beim Schlaf.",
+        body: [
+          "Viele Kinder können abends nicht abschalten. Brauchen Nähe. Oder wirken plötzlich wieder voller Energie.",
+          "Oft steckt dahinter kein Trotz, sondern ein Bedürfnis, das bisher nicht erkannt wurde.",
+        ],
+      },
+      {
+        heading: "Dieser Guide hilft dir dabei",
+        checklist: [
+          "Schlafverhalten besser zu verstehen",
+          "Bedürfnisse hinter dem Verhalten zu erkennen",
+          "Abendroutinen zu entwickeln",
+          "Energie gezielt zu regulieren",
+          "Mehr Ruhe in den Familienalltag zu bringen",
+        ],
+      },
+      {
+        heading: "Das Besondere",
+        body: [
+          "Der Guide verbindet Human Design mit praktischen Alltagserfahrungen und zeigt, warum Kinder unterschiedlich schlafen und unterschiedliche Bedürfnisse haben.",
+        ],
+      },
+      {
+        heading: "Für Eltern, die…",
+        bullets: [
+          "schon vieles ausprobiert haben",
+          "ihr Kind besser verstehen möchten",
+          "sich wieder ruhigere Nächte wünschen",
+          "mehr Leichtigkeit im Familienalltag suchen",
+        ],
+      },
+    ],
+    closing: ["Du musst dein Kind nicht verändern.", "Du darfst es zuerst verstehen."],
     price: eur(149),
     tier: "experten",
     format: "ebook",
@@ -226,12 +406,56 @@ export const products: Product[] = [
     worldId: "dich-selbst-verstehen-entfalten",
     familyId: "human-design",
     title: "Geburtsdatenanalyse",
-    tagline: "Dein Bauplan — endlich entschlüsselt.",
-    problem: "Du fragst dich, warum du bist, wie du bist.",
+    subtitle: "Wer bist du wirklich? — Der Schlüssel zu deinem inneren Potenzial",
+    tagline: "Nicht noch mehr Wissen. Sondern Klarheit.",
+    problem:
+      "Du spürst, dass mehr in dir steckt — aber dir fehlt die Klarheit, warum du denkst, fühlst und handelst, wie du es tust.",
     outcome:
-      "Du erhältst eine persönliche Analyse, die deine Anlagen und Muster sichtbar macht.",
+      "Du gewinnst Klarheit, Verständnis, Selbstannahme und konkrete Orientierung für deinen weiteren Weg.",
     description:
-      "Eine tiefgehende, persönliche Analyse deines Geburtsdatums, die deine Stärken, Muster und deinen Weg klar herausarbeitet.",
+      "Eine persönliche Analyse, die Human Design, Numerologie, Tiroler Zahlenrad und astrologische Grundelemente verbindet — für ein umfassendes Bild deiner Persönlichkeit.",
+    longDescription: [
+      {
+        body: [
+          "Hast du manchmal das Gefühl, dass sich bestimmte Situationen in deinem Leben immer wieder wiederholen? Spürst du, dass mehr in dir steckt, aber dir die Klarheit fehlt?",
+          "Oder möchtest du endlich verstehen, warum du denkst, fühlst und handelst, wie du es tust? Dann ist die Geburtsdatenanalyse genau der richtige Schritt.",
+        ],
+      },
+      {
+        heading: "Ein Blick hinter die Oberfläche",
+        body: [
+          "In dieser persönlichen Analyse verbinde ich verschiedene Systeme miteinander, um ein umfassendes Bild deiner Persönlichkeit, deiner Talente und deiner Herausforderungen sichtbar zu machen.",
+        ],
+        checklist: [
+          "Human Design",
+          "Numerologie",
+          "Tiroler Zahlenrad",
+          "Astrologische Grundelemente",
+        ],
+      },
+      {
+        heading: "Was du erhältst",
+        checklist: [
+          "Persönliche Analyse",
+          "Zoom oder Praxistermin",
+          "Individuelle Zusammenfassung",
+          "Human Design Auswertung",
+          "Persönliche Empfehlungen",
+          "Übungen und Tools",
+          "Workbook",
+        ],
+      },
+      {
+        heading: "Das Ziel",
+        body: ["Nicht noch mehr Wissen. Sondern Klarheit. Verständnis. Selbstannahme. Und konkrete Orientierung für deinen weiteren Weg."],
+      },
+      {
+        heading: "Auch für Familien geeignet",
+        body: [
+          "Viele Mütter nutzen die Analyse zusätzlich für ihre Kinder oder ihren Partner. Denn oft entsteht Verständnis genau dort, wo vorher Konflikte waren.",
+        ],
+      },
+    ],
     price: eur(399),
     tier: "premium",
     format: "analyse",
@@ -250,13 +474,62 @@ export const products: Product[] = [
     worldId: "dich-selbst-verstehen-entfalten",
     familyId: "human-design",
     title: "Human Design Master Guide · Erwachsene",
-    tagline: "Verstehe dich selbst, als hättest du die Bedienungsanleitung.",
+    subtitle: "Die komplette Human Design Betriebsanleitung für Erwachsene",
+    tagline: "Lerne dich selbst auf einer völlig neuen Ebene kennen.",
     problem:
-      "Du willst dich grundlegend verstehen — nicht oberflächlich, sondern wirklich.",
+      "Du suchst seit Jahren nach Antworten: Warum bin ich so? Warum treffen mich manche Dinge stärker als andere?",
     outcome:
-      "Du kannst deinen eigenen Chart lesen und deine Natur souverän einordnen.",
+      "Du lernst, Charts eigenständig zu lesen und die Zusammenhänge hinter Verhalten, Entscheidungen und Mustern zu verstehen.",
     description:
-      "Das umfangreiche Referenz- und Praxishandbuch für Erwachsene — eine Ausbildung im Buchformat. Danach liest du Charts eigenständig und verstehst dich auf einer neuen Ebene.",
+      "Ein Referenzwerk für echte Selbstkenntnis, das tiefes Wissen mit praktischer Anwendung verbindet — ein Werkzeug, das dich ein Leben lang begleitet.",
+    longDescription: [
+      {
+        body: [
+          "Viele Menschen verbringen Jahre damit, nach Antworten zu suchen. Warum bin ich so? Warum treffen mich manche Dinge stärker als andere? Warum funktionieren bestimmte Entscheidungen und andere nicht? Warum fühle ich mich manchmal, als würde ich gegen meine eigene Natur leben?",
+          "Human Design liefert keine Schubladen. Es liefert Verständnis.",
+        ],
+      },
+      {
+        heading: "Ein Referenzwerk für echte Selbstkenntnis",
+        body: [
+          "Der Human Design Master Guide Erwachsene verbindet tiefes Wissen mit praktischer Anwendung. Du lernst Schritt für Schritt die Sprache von Human Design zu verstehen und für dich selbst anzuwenden.",
+          "Dieses Werk wurde nicht geschrieben, um Wissen anzusammeln. Es wurde geschrieben, um Menschen dabei zu helfen, sich selbst besser zu verstehen.",
+        ],
+      },
+      {
+        heading: "Inhalte",
+        checklist: [
+          "Typen",
+          "Autoritäten",
+          "Profile",
+          "Zentren",
+          "Kanäle",
+          "Ernährung",
+          "Umgebung",
+          "Schlaf",
+          "Aktive und passive Gehirne",
+          "Umsetzung im Alltag",
+          "Beziehungen und Kommunikation",
+        ],
+      },
+      {
+        heading: "Für wen ist dieses Werk?",
+        bullets: [
+          "Menschen, die sich selbst besser verstehen möchten",
+          "Coaches",
+          "Begleiter",
+          "Human Design Interessierte",
+          "Alle, die Human Design nicht nur kennenlernen, sondern anwenden möchten",
+        ],
+      },
+      {
+        heading: "Das Ergebnis",
+        body: [
+          "Du wirst lernen, Charts eigenständig zu lesen und die Zusammenhänge hinter Verhalten, Entscheidungen und persönlichen Mustern besser zu verstehen.",
+          "Ein Werkzeug, das dich ein Leben lang begleitet.",
+        ],
+      },
+    ],
     price: eur(555),
     tier: "signature",
     format: "referenzwerk",

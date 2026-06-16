@@ -77,7 +77,10 @@ export default function ProductPage() {
             <p className="text-[10px] uppercase tracking-[0.2em] font-medium mb-2" style={{ color: isSignature ? "rgba(255,255,255,0.6)" : "var(--muted-foreground)" }}>
               {FORMAT_LABEL[p.format]}{p.badge && ` · ${BADGE_LABEL[p.badge]}`}
             </p>
-            <h1 style={D} className={`text-[2rem] lg:text-[2.7rem] font-light leading-tight mb-3 ${isSignature ? "text-white" : "text-foreground"}`}>{p.title}</h1>
+            <h1 style={D} className={`text-[2rem] lg:text-[2.7rem] font-light leading-tight mb-2 ${isSignature ? "text-white" : "text-foreground"}`}>{p.title}</h1>
+            {p.subtitle && (
+              <p className={`text-base lg:text-lg font-light mb-3 ${isSignature ? "text-white/75" : "text-foreground/70"}`}>{p.subtitle}</p>
+            )}
             <p className="text-base italic font-light mb-7" style={{ color: isSignature ? "#FBD0B0" : "#E01F5A" }}>{p.tagline}</p>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -100,26 +103,73 @@ export default function ProductPage() {
       {/* Inhalt */}
       <section className="px-6 py-14 lg:py-20 bg-background">
         <div className="max-w-lg mx-auto lg:max-w-3xl flex flex-col gap-12">
-          {/* Beschreibung */}
-          <FadeUp>
-            <p className="text-foreground/80 text-base leading-[1.9]">{p.description}</p>
-          </FadeUp>
+          {p.longDescription ? (
+            /* Reichhaltige, sektionierte Beschreibung */
+            p.longDescription.map((s, i) => (
+              <FadeUp key={i}>
+                {s.heading && (
+                  <h2 style={D} className="text-[1.5rem] lg:text-[1.8rem] font-light text-foreground mb-4 leading-snug">{s.heading}</h2>
+                )}
+                {s.body?.map((para, j) => (
+                  <p key={j} className="text-foreground/80 text-base leading-[1.9] mb-3 last:mb-0">{para}</p>
+                ))}
+                {s.checklist && (
+                  <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2.5 mt-4">
+                    {s.checklist.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-sm text-foreground/80">
+                        <Check size={16} className="flex-shrink-0 mt-0.5" style={{ color: "#E01F5A" }} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {s.bullets && (
+                  <ul className="mt-4 flex flex-col gap-2">
+                    {s.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-2.5 text-sm text-foreground/80">
+                        <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-[0.45rem]" style={{ background: "#E01F5A" }} />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </FadeUp>
+            ))
+          ) : (
+            <>
+              {/* Beschreibung */}
+              <FadeUp>
+                <p className="text-foreground/80 text-base leading-[1.9]">{p.description}</p>
+              </FadeUp>
 
-          {/* Problem → Ergebnis */}
-          <FadeUp>
-            <div className="grid gap-4 lg:grid-cols-2">
-              <div className="rounded-2xl p-6 border" style={{ borderColor: "rgba(224,31,90,0.14)", background: GS }}>
-                <p className="text-[10px] uppercase tracking-[0.25em] font-semibold mb-2" style={{ color: "#E01F5A" }}>Wo du gerade stehst</p>
-                <p className="text-sm text-foreground/80 leading-relaxed">{p.problem}</p>
+              {/* Problem → Ergebnis */}
+              <FadeUp>
+                <div className="grid gap-4 lg:grid-cols-2">
+                  <div className="rounded-2xl p-6 border" style={{ borderColor: "rgba(224,31,90,0.14)", background: GS }}>
+                    <p className="text-[10px] uppercase tracking-[0.25em] font-semibold mb-2" style={{ color: "#E01F5A" }}>Wo du gerade stehst</p>
+                    <p className="text-sm text-foreground/80 leading-relaxed">{p.problem}</p>
+                  </div>
+                  <div className="rounded-2xl p-6 border" style={{ borderColor: "rgba(224,31,90,0.14)", background: "white" }}>
+                    <p className="text-[10px] uppercase tracking-[0.25em] font-semibold mb-2 flex items-center gap-1.5" style={{ color: "#E01F5A" }}>
+                      <Check size={12} /> Dein Ergebnis
+                    </p>
+                    <p className="text-sm text-foreground/80 leading-relaxed">{p.outcome}</p>
+                  </div>
+                </div>
+              </FadeUp>
+            </>
+          )}
+
+          {/* Abschluss-Zeilen */}
+          {p.closing && p.closing.length > 0 && (
+            <FadeUp>
+              <div className="text-center py-2">
+                {p.closing.map((line, i) => (
+                  <p key={i} style={{ ...D, ...GT }} className="text-[1.4rem] lg:text-[1.7rem] font-light leading-snug">{line}</p>
+                ))}
               </div>
-              <div className="rounded-2xl p-6 border" style={{ borderColor: "rgba(224,31,90,0.14)", background: "white" }}>
-                <p className="text-[10px] uppercase tracking-[0.25em] font-semibold mb-2 flex items-center gap-1.5" style={{ color: "#E01F5A" }}>
-                  <Check size={12} /> Dein Ergebnis
-                </p>
-                <p className="text-sm text-foreground/80 leading-relaxed">{p.outcome}</p>
-              </div>
-            </div>
-          </FadeUp>
+            </FadeUp>
+          )}
 
           {/* Methode dezent im Hintergrund */}
           {p.method && p.method.length > 0 && (

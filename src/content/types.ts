@@ -101,6 +101,18 @@ export interface ProductFamily {
   description: string;
 }
 
+// ── Abschnitt einer Produktbeschreibung ──────────────────────────────────────
+export interface ProductSection {
+  /** Überschrift des Abschnitts (optional, z. B. „Das erwartet dich“). */
+  heading?: string;
+  /** Fließtext-Absätze. */
+  body?: string[];
+  /** ✓-Liste (Inhalte/Features). */
+  checklist?: string[];
+  /** Aufzählung (z. B. „Für wen ist das geeignet?“). */
+  bullets?: string[];
+}
+
 // ── Produkt ──────────────────────────────────────────────────────────────────
 export interface Product {
   id: Id;
@@ -114,13 +126,20 @@ export interface Product {
 
   // — Positionierung (Strategie: Problem → Wunsch → Ergebnis) —
   title: string;
+  /** Sekundäre Überschrift unter dem Namen (Produktseite). */
+  subtitle?: string;
   /** Emotionaler Einzeiler übers Ergebnis, nicht über die Methode. */
   tagline: string;
   /** Welches Problem löst es? (für Quiz-Matching & Texte) */
   problem: string;
   /** Welches Ergebnis entsteht? */
   outcome: string;
+  /** Kurze Zusammenfassung (Karten, Listen). */
   description: string;
+  /** Ausführliche, sektionierte Beschreibung für die Produktseite. */
+  longDescription?: ProductSection[];
+  /** Emotionale Abschluss-Zeilen (zentriert, hervorgehoben). */
+  closing?: string[];
 
   // — Handel —
   price: Money;
