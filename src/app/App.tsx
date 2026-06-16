@@ -9,7 +9,7 @@ import sabrinavPhoto from "@/imports/Sabrina.png";
 import { getMainWorlds, getProductsByWorld, getTestimonials, getFeaturedLeadMagnet, getProduct } from "@/content";
 import { D, B, G, GS, GT, FadeUp } from "./shared/brand";
 import { SiteNav, SiteFooter } from "./shared/SiteChrome";
-import { ProductCardAuto } from "./shared/ProductCard";
+import { ProductCard, SignatureCard } from "./shared/ProductCard";
 
 // Startseite: Hauptwelten als Tabs, je deren featured-Produkte (aus @/content).
 const MAIN_WORLDS = getMainWorlds();
@@ -230,9 +230,18 @@ export default function App() {
               key={activeWorldId}
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.25 }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-4"
+              className="flex flex-col gap-4"
             >
-              {products.map((p, i) => <ProductCardAuto key={p.id} p={p} index={i} />)}
+              {/* Signature-Produkte zuerst, volle Breite — konsistent in jeder Welt. */}
+              {products.filter((p) => p.tier === "signature").map((p, i) => (
+                <SignatureCard key={p.id} p={p} index={i} />
+              ))}
+              {/* Übrige Produkte im 3-Spalten-Raster (keine Waisen, fülliger). */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {products.filter((p) => p.tier !== "signature").map((p, i) => (
+                  <ProductCard key={p.id} p={p} index={i} />
+                ))}
+              </div>
             </motion.div>
           </AnimatePresence>
 
