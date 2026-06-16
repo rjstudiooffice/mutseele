@@ -2,7 +2,7 @@
 // MutSeele · Content-Layer · Öffentliche API
 //
 // Single Entry Point. UI-Code importiert NUR von hier:
-//   import { getWorlds, getProductsByWorld, relatedProducts } from "@/content";
+//   import { getWorlds, getProductsByWorld, getRecommendations } from "@/content";
 //
 // Vorteil: Wenn die Quelle später von TypeScript-Daten auf Sanity wechselt,
 // ändern sich nur die Implementierungen hier — kein UI-Code muss angefasst
@@ -127,11 +127,6 @@ export function validateContent(): string[] {
     if (getCategory(p.categoryId)?.worldId !== p.worldId)
       errors.push(`Produkt ${p.id} → worldId passt nicht zur Kategorie`);
     if (p.familyId && !familyIds.has(p.familyId)) errors.push(`Produkt ${p.id} → unbekannte Familie ${p.familyId}`);
-    p.recommendedProductIds?.forEach((id) => {
-      if (!productIds.has(id)) errors.push(`Produkt ${p.id} → empfiehlt unbekanntes Produkt ${id}`);
-    });
-    if (p.nextStepProductId && !productIds.has(p.nextStepProductId))
-      errors.push(`Produkt ${p.id} → nextStep unbekannt ${p.nextStepProductId}`);
     // Tentary-Struktur muss vollständig sein (Werte dürfen Platzhalter sein).
     if (!p.tentary?.productId || !p.tentary?.checkoutUrl)
       errors.push(`Produkt ${p.id} → Tentary unvollständig (productId/checkoutUrl)`);

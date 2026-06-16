@@ -90,8 +90,6 @@ export const products: Product[] = [
     featured: true,
     tentary: checkout("hd-master-guide-kids"),
     tags: ["kind-verstehen", "human-design", "tiefe", "referenzwerk"],
-    nextStepProductId: "betriebsanleitung-kind",
-    recommendedProductIds: ["betriebsanleitung-kind", "seelenstark-kind"],
   },
   {
     id: "betriebsanleitung-kind",
@@ -150,7 +148,6 @@ export const products: Product[] = [
     featured: true,
     tentary: checkout("betriebsanleitung-kind"),
     tags: ["kind-verstehen", "human-design", "alltag", "individuell"],
-    nextStepProductId: "hd-master-guide-kids",
   },
   {
     id: "seelenstark-kind",
@@ -210,7 +207,6 @@ export const products: Product[] = [
     badge: "beliebt",
     tentary: checkout("seelenstark-kind"),
     tags: ["selbstvertrauen", "selbstwert", "kind", "einstieg"],
-    nextStepProductId: "betriebsanleitung-kind",
   },
 
   // ── WELT 1 · Lernen & Entwicklung ──────────────────────────────────────────
@@ -286,7 +282,6 @@ export const products: Product[] = [
     featured: true,
     tentary: checkout("bewegung-vernetzung"),
     tags: ["lernen", "konzentration", "bewegung", "regulation"],
-    recommendedProductIds: ["schulstress-verstehen", "schlaf-guide"],
   },
   {
     id: "schulstress-verstehen",
@@ -350,7 +345,6 @@ export const products: Product[] = [
     emoji: "🎒",
     tentary: checkout("schulstress-verstehen"),
     tags: ["lernen", "schule", "stress", "regulation"],
-    recommendedProductIds: ["bewegung-vernetzung", "21-tage-leichtigkeit"],
   },
   {
     id: "21-tage-leichtigkeit",
@@ -477,7 +471,6 @@ export const products: Product[] = [
     emoji: "🌙",
     tentary: checkout("schlaf-guide"),
     tags: ["schlaf", "regulation", "familie", "ruhe"],
-    recommendedProductIds: ["bewegung-vernetzung"],
   },
 
   // ── WELT 1 · Intuition & Selbstvertrauen ───────────────────────────────────
@@ -534,7 +527,6 @@ export const products: Product[] = [
     featured: true,
     tentary: checkout("magisches-kinder-workbook"),
     tags: ["intuition", "selbstvertrauen", "kind", "spielerisch"],
-    recommendedProductIds: ["seelenstark-kind"],
   },
 
   // ── WELT 1 · Schwangerschaft & Baby ────────────────────────────────────────
@@ -655,8 +647,6 @@ export const products: Product[] = [
     featured: true,
     tentary: checkout("geburtsdatenanalyse"),
     tags: ["selbstverstaendnis", "analyse", "individuell", "tiefe"],
-    nextStepProductId: "hd-master-guide-erwachsene",
-    recommendedProductIds: ["hd-master-guide-erwachsene", "seelenstark-erwachsene"],
   },
   {
     id: "hd-master-guide-erwachsene",
@@ -729,8 +719,6 @@ export const products: Product[] = [
     featured: true,
     tentary: checkout("hd-master-guide-erwachsene"),
     tags: ["selbstverstaendnis", "human-design", "tiefe", "referenzwerk"],
-    nextStepProductId: "seelenstark-videokurs",
-    recommendedProductIds: ["geburtsdatenanalyse", "seelenstark-videokurs"],
   },
   {
     id: "seelenstark-erwachsene",
@@ -783,7 +771,6 @@ export const products: Product[] = [
     featured: true,
     tentary: checkout("seelenstark-erwachsene"),
     tags: ["selbstwert", "selbstvertrauen", "frauen", "einstieg"],
-    nextStepProductId: "seelenstark-videokurs",
   },
 
   // ── WELT 2 · Dich selbst entfalten ─────────────────────────────────────────
@@ -840,7 +827,6 @@ export const products: Product[] = [
     emoji: "🎬",
     tentary: checkout("seelenstark-videokurs"),
     tags: ["entwicklung", "transformation", "frauen", "kurs"],
-    recommendedProductIds: ["vision-book", "mandala-magic"],
   },
   {
     id: "vision-book",
@@ -908,7 +894,6 @@ export const products: Product[] = [
     featured: true,
     tentary: checkout("vision-book"),
     tags: ["vision", "klarheit", "entwicklung", "journal"],
-    nextStepProductId: "seelenstark-videokurs",
   },
   {
     id: "mandala-magic",

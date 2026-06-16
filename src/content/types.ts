@@ -164,12 +164,11 @@ export interface Product {
   tentary?: TentaryRef;
 
   // — Empfehlungs-Engine —
-  /** Frei vergebene Themen-Tags fürs Matching (Quiz, KI, Cross-Sell). */
+  /**
+   * Frei vergebene Themen-Tags fürs Matching (Quiz, KI). Produkt-Empfehlungen
+   * („Das könnte dich ebenfalls begleiten“) liegen in data/recommendations.ts.
+   */
   tags?: string[];
-  /** Manuell kuratierte „Passt dazu“-Produkte (überschreibt Auto-Logik). */
-  recommendedProductIds?: Id[];
-  /** Nächster logischer Schritt in der Werttreppe (Upsell). */
-  nextStepProductId?: Id;
 
   seo?: Seo;
 }

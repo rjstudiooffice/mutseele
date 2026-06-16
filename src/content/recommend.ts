@@ -50,7 +50,7 @@ export function getRecommendations(product: Product, limit = 3): Product[] {
 // die KI-/Luna-Empfehlung (die KI liefert dann nur `matchTags` + Kontext).
 //
 // Score-Faktoren (gewichtet):
-//   +5  manuell kuratiert (recommendedProductIds / primaryProductId)
+//   +5  manuell kuratiert (pinnedProductIds / primaryProductId)
 //   +3  Tag-Treffer (pro übereinstimmendem Tag)
 //   +2  gleiche Kategorie
 //   +1  gleiche Welt
@@ -130,19 +130,6 @@ export function recommendProducts(input: RecommendInput): ScoredProduct[] {
   );
 
   return scored.slice(0, limit);
-}
-
-/** „Passt dazu“ für eine Produktseite: nutzt kuratierte IDs + Auto-Scoring. */
-export function relatedProducts(product: Product, limit = 4): ScoredProduct[] {
-  return recommendProducts({
-    worldId: product.worldId,
-    categoryId: product.categoryId,
-    familyId: product.familyId,
-    tags: product.tags,
-    pinnedProductIds: product.recommendedProductIds,
-    excludeProductIds: [product.id],
-    limit,
-  });
 }
 
 /** Quiz-Ergebnis → konkrete Empfehlung (Anker-Produkt zuerst). */
