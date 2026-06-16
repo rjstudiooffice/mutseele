@@ -159,15 +159,53 @@ export const products: Product[] = [
     secondaryCategoryIds: ["intuition-selbstvertrauen-kind"],
     familyId: "seelenstark",
     title: "Seelenstark · Kind",
-    tagline: "Damit dein Kind sich selbst vertrauen lernt.",
-    problem: "Dein Kind zweifelt an sich und braucht mehr inneren Halt.",
-    outcome: "Dein Kind erlebt Selbstwert und innere Stärke im Alltag.",
+    subtitle: "Was die Geburtszahlen über dein Kind verraten",
+    tagline: "Verstehe dein Kind auf einer neuen Ebene.",
+    problem:
+      "Warum fällt deinem Kind manches leicht, während andere Dinge immer wieder zur Herausforderung werden?",
+    outcome:
+      "Du verstehst die Persönlichkeit, Talente und Bedürfnisse deines Kindes besser — und begleitest es individueller.",
     description:
-      "Ein liebevoller Einstieg, der Kindern hilft, ihren eigenen Wert zu spüren — mit Impulsen, die in den Familienalltag passen.",
+      "Ein Workbook, das über die Geburtszahlen Stärken, Lernverhalten und Persönlichkeit deines Kindes sichtbar macht — für eine individuellere Begleitung.",
+    longDescription: [
+      {
+        body: [
+          "Warum fällt deinem Kind manches leicht, während andere Dinge immer wieder zur Herausforderung werden? Warum ist es besonders sensibel, neugierig, kreativ oder freiheitsliebend?",
+          "Und warum scheint es manche Menschen zu lieben, während es bei anderen ständig zu Konflikten kommt?",
+          "Dieses Workbook hilft dir dabei, die Persönlichkeit, Talente und Bedürfnisse deines Kindes besser zu verstehen.",
+        ],
+      },
+      {
+        heading: "Was sind Geburtszahlen?",
+        body: [
+          "Jedes Kind bringt seine ganz eigene Energie mit.",
+          "Die Geburtszahlen geben Hinweise auf Stärken, Potenziale, Lernverhalten und Persönlichkeitsmerkmale. Sie können helfen, bestimmte Verhaltensweisen besser einzuordnen und Kinder individueller zu begleiten.",
+        ],
+      },
+      {
+        heading: "Das erwartet dich",
+        checklist: [
+          "Erklärung aller Himmelsrichtungen",
+          "Persönlichkeitsmerkmale",
+          "Lerntypen",
+          "Talente und Potenziale",
+          "Herausforderungen verstehen",
+          "Berufsorientierungen",
+          "Affirmationen",
+          "Eltern-Checklisten",
+          "Schritt-für-Schritt-Anleitung",
+        ],
+      },
+      {
+        heading: "Das Ziel",
+        body: ["Nicht dein Kind zu verändern. Sondern es besser zu verstehen."],
+      },
+    ],
+    closing: ["Verständnis schafft Verbindung.", "Verbindung schafft Vertrauen."],
     price: eur(29),
     tier: "einstieg",
     format: "workbook",
-    method: ["bewusstseinsarbeit"],
+    method: ["numerologie"],
     emoji: "🌟",
     badge: "beliebt",
     tentary: checkout("seelenstark-kind"),
@@ -256,13 +294,55 @@ export const products: Product[] = [
     worldId: "kinder-verstehen-staerken",
     familyId: "entwicklung-regulation",
     title: "Schulstress verstehen. Kinder stärken.",
-    tagline: "Schule muss kein Kraftakt sein.",
+    subtitle: "Ganzheitliche Lernbegleitung für Kinder und Familien",
+    tagline: "Lernen sollte kein täglicher Kampf sein.",
     problem:
-      "Schule bedeutet bei euch Druck, Tränen und Streit ums Lernen.",
+      "Hausaufgaben werden zur Belastung, die Konzentration fehlt, Frust und Streit nehmen zu — und Eltern fühlen sich hilflos.",
     outcome:
-      "Du erkennst die Wurzeln des Stresses und stärkst dein Kind gezielt.",
+      "Mehr Verständnis, mehr Leichtigkeit und mehr Sicherheit für Eltern und Kinder.",
     description:
-      "Ein praxisnaher Leitfaden, der Schulstress entschlüsselt und konkrete Wege zeigt, wie Kinder wieder in Ruhe und Selbstvertrauen lernen.",
+      "Eine ganzheitliche Lernbegleitung, die dein Kind als Ganzes betrachtet — mit Beratung, Worksheets, Übungsvideos und WhatsApp-Nachbetreuung.",
+    longDescription: [
+      {
+        body: [
+          "Lernen sollte kein täglicher Kampf sein. Und doch erleben viele Familien genau das.",
+          "Hausaufgaben werden zur Belastung. Die Konzentration fehlt. Frust und Streit nehmen zu. Eltern fühlen sich hilflos.",
+        ],
+      },
+      {
+        heading: "Gemeinsam Ursachen erkennen",
+        body: [
+          "In dieser ganzheitlichen Lernbegleitung betrachten wir dein Kind als Ganzes. Nicht nur die schulischen Leistungen, sondern auch die Faktoren, die Lernen, Konzentration und Wohlbefinden beeinflussen.",
+        ],
+      },
+      {
+        heading: "Wir betrachten unter anderem",
+        checklist: [
+          "Konzentration",
+          "Lernverhalten",
+          "Emotionale Belastungen",
+          "Gehirnvernetzung",
+          "Nährstoffversorgung",
+          "Human Design",
+          "Persönliche Stärken",
+        ],
+      },
+      {
+        heading: "Du erhältst",
+        checklist: [
+          "1,5–2 Stunden Beratung",
+          "Persönliche Zusammenfassung",
+          "Worksheets",
+          "Übungsvideos",
+          "Individuelle Empfehlungen",
+          "Nachbetreuung per WhatsApp",
+        ],
+      },
+      {
+        heading: "Das Ziel",
+        body: ["Mehr Verständnis. Mehr Leichtigkeit. Mehr Sicherheit für Eltern und Kinder."],
+      },
+    ],
     price: eur(179),
     tier: "experten",
     format: "programm",
@@ -277,11 +357,55 @@ export const products: Product[] = [
     categoryId: "lernen-entwicklung",
     worldId: "kinder-verstehen-staerken",
     title: "21 Tage für mehr Leichtigkeit",
-    tagline: "Drei Wochen, die euren Alltag entlasten.",
-    problem: "Euer Familienalltag fühlt sich schwer und angespannt an.",
-    outcome: "Ihr etabliert in 21 Tagen mehr Leichtigkeit und Verbindung.",
+    subtitle: "Gemeinsam stärken. Gemeinsam wachsen.",
+    tagline: "Kleine Momente, die langfristig den größten Unterschied machen.",
+    problem:
+      "Im oft hektischen Alltag bleibt wenig Zeit für bewusste Verbindung.",
+    outcome:
+      "Über kleine tägliche Übungen entstehen neue Verbindungen, mehr Sicherheit und mehr innere Balance.",
     description:
-      "Ein begleitetes 21-Tage-Programm mit kleinen, machbaren Impulsen, die spürbar Druck aus dem Alltag nehmen.",
+      "Ein begleitetes 21-Tage-Programm mit kleinen, alltagstauglichen Übungen für mehr Verbindung, Stärke und Leichtigkeit in der Familie.",
+    longDescription: [
+      {
+        body: [
+          "In unserem oft hektischen Alltag bleibt wenig Zeit für bewusste Verbindung. Dabei sind es genau diese kleinen Momente, die langfristig den größten Unterschied machen.",
+        ],
+      },
+      {
+        heading: "Warum 21 Tage?",
+        body: [
+          "Wiederholungen helfen dem Gehirn, neue Gewohnheiten zu etablieren.",
+          "Durch kleine tägliche Übungen entstehen neue Verbindungen, mehr Sicherheit und mehr innere Balance.",
+        ],
+      },
+      {
+        heading: "Die Übungen fördern",
+        checklist: [
+          "Konzentration",
+          "Selbstvertrauen",
+          "Achtsamkeit",
+          "Selbstliebe",
+          "Schlaf",
+          "Lernfähigkeit",
+          "Emotionale Stabilität",
+        ],
+      },
+      {
+        heading: "Das Besondere",
+        body: [
+          "Die Übungen sind bewusst einfach gehalten. Sie lassen sich problemlos in den Familienalltag integrieren und benötigen nur wenige Minuten pro Tag.",
+        ],
+      },
+      {
+        heading: "Für Familien, die…",
+        bullets: [
+          "mehr Verbindung möchten",
+          "ihr Kind stärken wollen",
+          "gemeinsam wachsen möchten",
+          "mehr Leichtigkeit suchen",
+        ],
+      },
+    ],
     price: eur(24),
     tier: "einstieg",
     format: "programm",
@@ -362,12 +486,45 @@ export const products: Product[] = [
     categoryId: "intuition-selbstvertrauen-kind",
     worldId: "kinder-verstehen-staerken",
     title: "Magisches Kinder Workbook",
-    tagline: "Spielerisch zu mehr Selbstvertrauen.",
-    problem: "Dein Kind soll seiner Intuition und sich selbst mehr vertrauen.",
+    subtitle: "Stärke deine Intuition und dein Selbstvertrauen",
+    tagline: "Spielerisch. Liebevoll. Ohne Druck.",
+    problem:
+      "Mit der Zeit lernen viele Kinder, ihrer eigenen Wahrnehmung immer weniger zu vertrauen.",
     outcome:
-      "Dein Kind entdeckt spielerisch seine innere Stärke und Intuition.",
+      "Dein Kind lernt, seiner eigenen Wahrnehmung zu vertrauen und seine innere Stärke zu entwickeln.",
     description:
-      "Ein liebevoll gestaltetes Workbook voller Impulse, Übungen und Magie, das Kindern hilft, sich selbst und ihrer Intuition zu vertrauen.",
+      "Ein liebevolles Workbook, das Kindern spielerisch hilft, ihre Intuition und ihr Selbstvertrauen zu stärken — mit Übungen, Schutztechniken und Worksheets.",
+    longDescription: [
+      {
+        body: [
+          "Kinder tragen eine natürliche Intuition in sich. Sie spüren. Sie fühlen. Sie nehmen die Welt oft viel intensiver wahr, als Erwachsene glauben.",
+          "Doch mit der Zeit lernen viele Kinder, ihrer eigenen Wahrnehmung immer weniger zu vertrauen.",
+        ],
+      },
+      {
+        heading: "Dieses Workbook hilft dabei",
+        body: ["…die Verbindung zu sich selbst zu stärken. Spielerisch. Liebevoll. Ohne Druck."],
+      },
+      {
+        heading: "Inhalte",
+        checklist: [
+          "Intuitionsübungen",
+          "Pendelübungen",
+          "Gedankenkraft",
+          "Selbstvertrauen",
+          "Abgrenzung",
+          "Schutztechniken",
+          "Worksheets",
+          "Praktische Übungen",
+        ],
+      },
+      {
+        heading: "Das Ziel",
+        body: [
+          "Kinder dabei unterstützen, ihrer eigenen Wahrnehmung zu vertrauen und ihre innere Stärke zu entwickeln.",
+        ],
+      },
+    ],
     price: eur(39),
     tier: "core",
     format: "workbook",
@@ -386,11 +543,44 @@ export const products: Product[] = [
     categoryId: "schwangerschaft-baby",
     worldId: "kinder-verstehen-staerken",
     title: "MamaStart",
-    tagline: "Ein klarer, ruhiger Start ins Mama-Sein.",
-    problem: "Du wünschst dir Orientierung und Ruhe für den Start mit deinem Baby.",
-    outcome: "Du gehst gestärkt, informiert und gelassen in die erste Zeit.",
+    subtitle: "Dein sicherer Weg durch Schwangerschaft und Babyzeit",
+    tagline: "Mehr Orientierung. Weniger widersprüchliche Ratschläge. Mehr Sicherheit.",
+    problem:
+      "Viele Mütter wünschen sich mehr Orientierung, weniger widersprüchliche Ratschläge und vor allem mehr Sicherheit.",
+    outcome:
+      "Du startest informiert, entspannt und gestärkt in diese besondere Lebensphase.",
     description:
-      "Dein Begleiter für Schwangerschaft und die erste Babyzeit — Orientierung und Sicherheit statt Überforderung.",
+      "Ein kompakter Kurs für die wichtigsten Fragen rund um Schwangerschaft, Geburt und Babyzeit — Orientierung statt widersprüchlicher Ratschläge.",
+    longDescription: [
+      {
+        body: [
+          "Viele Mütter wünschen sich mehr Orientierung. Weniger widersprüchliche Ratschläge. Und vor allem mehr Sicherheit. Genau dafür wurde MamaStart entwickelt.",
+        ],
+      },
+      {
+        heading: "Ein kompakter Kurs für die wichtigsten Fragen",
+        body: [
+          "Was braucht mein Baby wirklich? Welche Anschaffungen sind sinnvoll? Wie kann ich die Entwicklung meines Kindes unterstützen? Welche Nährstoffe sind wichtig?",
+        ],
+      },
+      {
+        heading: "Inhalte",
+        checklist: [
+          "Schwangerschaft",
+          "Geburt",
+          "Babyentwicklung",
+          "Nährstoffe",
+          "Gehirnentwicklung",
+          "Vernetzungsübungen",
+          "Alltagstipps",
+        ],
+      },
+      {
+        heading: "Für werdende Mütter",
+        body: ["…die informiert, entspannt und gestärkt in diese besondere Lebensphase starten möchten."],
+      },
+    ],
+    closing: ["Ein Kurs, den viele Mütter gerne früher gehabt hätten."],
     price: eur(59),
     tier: "core",
     format: "ebook",
@@ -549,15 +739,45 @@ export const products: Product[] = [
     secondaryCategoryIds: ["dich-selbst-entfalten"],
     familyId: "seelenstark",
     title: "Seelenstark · Erwachsene",
-    tagline: "Zurück zu deinem Selbstwert.",
-    problem: "Du zweifelst an deinem Wert und deiner Kraft.",
-    outcome: "Du findest in deinen Selbstwert und deine innere Stärke zurück.",
+    subtitle: "Was Geburtszahlen über dich verraten",
+    tagline: "Verstehe die Sprache deiner Energie.",
+    problem:
+      "Warum wiederholen sich bestimmte Muster in deinem Leben — und warum fallen dir manche Dinge leichter als anderen?",
+    outcome:
+      "Mehr Verständnis für dich selbst, mehr Klarheit und mehr Bewusstsein für deine eigenen Potenziale.",
     description:
-      "Ein transformativer Einstieg für Frauen, die alte Glaubenssätze loslassen und in ihre Kraft zurückfinden möchten.",
+      "Ein Workbook, das über deine Geburtszahlen neue Perspektiven auf deine Persönlichkeit, deine Stärken und deine Muster eröffnet.",
+    longDescription: [
+      {
+        body: [
+          "Warum wiederholen sich bestimmte Muster in deinem Leben? Warum fühlst du dich zu manchen Menschen hingezogen und bei anderen sofort unwohl? Und warum fallen dir bestimmte Dinge leichter als anderen?",
+        ],
+      },
+      {
+        heading: "Dieses Workbook hilft dir dabei",
+        body: ["…deine Zahlen besser zu verstehen und neue Perspektiven auf deine Persönlichkeit zu gewinnen."],
+      },
+      {
+        heading: "Inhalte",
+        checklist: [
+          "Zahlen verstehen",
+          "Farben verstehen",
+          "Persönlichkeitsmuster",
+          "Beziehungen",
+          "Stärken",
+          "Herausforderungen",
+          "Alltagstipps",
+        ],
+      },
+      {
+        heading: "Das Ergebnis",
+        body: ["Mehr Verständnis für dich selbst. Mehr Klarheit. Mehr Bewusstsein für die eigenen Potenziale."],
+      },
+    ],
     price: eur(29),
     tier: "einstieg",
     format: "workbook",
-    method: ["bewusstseinsarbeit"],
+    method: ["numerologie"],
     emoji: "🌸",
     badge: "beliebt",
     featured: true,
@@ -573,11 +793,46 @@ export const products: Product[] = [
     worldId: "dich-selbst-verstehen-entfalten",
     familyId: "seelenstark",
     title: "Seelenstark · Videokurs",
-    tagline: "Vom Verstehen ins echte Verändern.",
-    problem: "Du weißt vieles über dich — aber die Umsetzung fehlt.",
-    outcome: "Du gehst Schritt für Schritt in deine gelebte innere Stärke.",
+    subtitle: "Menschen verstehen. Beziehungen stärken.",
+    tagline: "Viele Konflikte entstehen nicht durch böse Absicht, sondern durch fehlendes Verständnis.",
+    problem:
+      "Warum reagiert mein Kind so? Warum geraten wir immer wieder an denselben Punkt? Warum fühle ich mich bei manchen Menschen gestärkt und bei anderen ausgelaugt?",
+    outcome:
+      "Du verstehst Menschen auf einer tieferen Ebene, erkennst Persönlichkeitsmuster und nimmst Beziehungen bewusster wahr.",
     description:
-      "Der vertiefende Videokurs der Seelenstark-Familie: geführte Lektionen, die dich von Erkenntnis in nachhaltige Veränderung bringen.",
+      "Ein Videokurs, der dir hilft, Menschen tiefer zu verstehen und Beziehungen bewusster zu gestalten — inkl. Seelenstark Kind & Erwachsene.",
+    longDescription: [
+      {
+        body: ["Viele Konflikte entstehen nicht durch böse Absicht. Sondern durch fehlendes Verständnis."],
+      },
+      {
+        body: [
+          "Warum reagiert mein Kind so? Warum geraten wir immer wieder an denselben Punkt? Warum fühle ich mich bei manchen Menschen gestärkt und bei anderen ausgelaugt?",
+        ],
+      },
+      {
+        heading: "In diesem Kurs lernst du",
+        body: ["…Menschen auf einer tieferen Ebene zu verstehen. Persönlichkeitsmuster zu erkennen. Beziehungen bewusster wahrzunehmen."],
+      },
+      {
+        heading: "Enthalten",
+        checklist: [
+          "1,5 Stunden Videokurs",
+          "Seelenstark Kind",
+          "Seelenstark Erwachsene",
+          "Präsentation",
+          "Praxisbeispiele",
+        ],
+      },
+      {
+        heading: "Für alle, die",
+        bullets: [
+          "Beziehungen besser verstehen möchten",
+          "Konflikte anders betrachten möchten",
+          "mehr Klarheit über sich und ihr Umfeld gewinnen möchten",
+        ],
+      },
+    ],
     price: eur(149),
     tier: "experten",
     format: "videokurs",
@@ -592,12 +847,58 @@ export const products: Product[] = [
     categoryId: "dich-selbst-entfalten",
     worldId: "dich-selbst-verstehen-entfalten",
     title: "Vision Book",
-    tagline: "Dein Leben — in deinen Worten.",
-    problem: "Dir fehlt Klarheit über das, was du wirklich willst.",
+    subtitle: "Entdecke deine Stärken. Gestalte deine Zukunft.",
+    tagline: "Zeit für dich. Zeit für deine Gedanken. Zeit für deine Zukunft.",
+    problem:
+      "Du spürst, dass mehr in dir steckt — doch oft fehlt die Klarheit, wo du anfangen sollst.",
     outcome:
-      "Du formulierst deine Wünsche, Werte und Vision Schritt für Schritt.",
+      "Du gewinnst Schritt für Schritt mehr Selbstbewusstsein, Klarheit und eine klare Ausrichtung für deine Zukunft.",
     description:
-      "Ein geführtes Journal, das dich zu deinen tiefsten Wünschen, Werten und deiner inneren Stimme führt.",
+      "Ein geführtes 4-Wochen-Journal zu mehr Selbstbewusstsein, Klarheit und einer klaren Vision für deine Zukunft.",
+    longDescription: [
+      {
+        body: [
+          "Manchmal spüren wir, dass mehr in uns steckt. Wir wissen, dass wir etwas verändern möchten. Doch oft fehlt die Klarheit darüber, wo wir anfangen sollen.",
+          "Das Vision Book begleitet dich Schritt für Schritt auf dem Weg zu mehr Selbstbewusstsein, Klarheit und persönlicher Entwicklung.",
+        ],
+      },
+      {
+        heading: "Zeit für dich",
+        body: [
+          "Zeit für deine Gedanken. Zeit für deine Zukunft.",
+          "In vier aufeinander aufbauenden Wochen setzt du dich intensiv mit dir selbst auseinander und gewinnst neue Erkenntnisse über deine Wünsche, Ziele und Potenziale.",
+        ],
+      },
+      {
+        heading: "Das erwartet dich",
+        body: [
+          "Woche 1 — Selbstreflexion & Selbstbewusstsein: Lerne dich selbst besser kennen und erkenne deine Stärken und Herausforderungen.",
+          "Woche 2 — Ziele & Visionen: Definiere klare Ziele und entwickle eine Vorstellung davon, wohin dein Weg führen darf.",
+          "Woche 3 — Positive Gedanken & innere Ausrichtung: Lerne deine Gedanken bewusster wahrzunehmen und neue Perspektiven zu entwickeln.",
+          "Woche 4 — Deine Vision: Verbinde deine Erkenntnisse und entwickle eine klare Ausrichtung für die Zukunft.",
+        ],
+      },
+      {
+        heading: "Das bekommst du",
+        checklist: [
+          "Reflexionsübungen",
+          "Journaling-Impulse",
+          "Zielsetzungsübungen",
+          "Vision-Arbeit",
+          "Schritt-für-Schritt-Anleitung",
+          "Tägliche Aufgaben",
+        ],
+      },
+      {
+        heading: "Für wen ist das Vision Book geeignet?",
+        bullets: [
+          "Frauen, die sich selbst besser kennenlernen möchten",
+          "Frauen, die neue Klarheit suchen",
+          "Frauen, die ihr Leben bewusster gestalten möchten",
+        ],
+      },
+    ],
+    closing: ["Die wichtigste Beziehung in deinem Leben ist die zu dir selbst."],
     price: eur(24),
     tier: "einstieg",
     format: "journal",
@@ -614,11 +915,57 @@ export const products: Product[] = [
     categoryId: "dich-selbst-entfalten",
     worldId: "dich-selbst-verstehen-entfalten",
     title: "Mandala Magic",
-    tagline: "Zur Ruhe kommen, kreativ entfalten.",
-    problem: "Du suchst einen sanften Weg zu Ruhe und Selbstausdruck.",
-    outcome: "Du findest über kreatives Tun zurück zu dir.",
+    subtitle: "Affirmationen, Krafttiere & Selbstliebe",
+    tagline: "Schenke dir einen Moment der Ruhe.",
+    problem: "Der Alltag ist oft laut, schnell und fordernd.",
+    outcome:
+      "Du schaffst dir bewusste Inseln der Entspannung und verbindest Kreativität mit Achtsamkeit.",
     description:
-      "Ein kreativer Einstieg, der über Mandalas Ruhe, Fokus und Selbstausdruck verbindet.",
+      "Ein Ausmal-Workbook, das kreatives Ausmalen mit Selbstfürsorge, Achtsamkeit und Krafttier-Botschaften verbindet.",
+    longDescription: [
+      {
+        body: [
+          "Der Alltag ist oft laut. Schnell. Fordernd. Umso wichtiger ist es, bewusst kleine Inseln der Entspannung zu schaffen.",
+          "Mandala Magic verbindet kreatives Ausmalen mit Selbstfürsorge, Achtsamkeit und inspirierenden Botschaften.",
+        ],
+      },
+      {
+        heading: "Mehr als nur Mandalas",
+        body: [
+          "Jedes Mandala ist mit einem Krafttier verbunden.",
+          "Diese Krafttiere erinnern dich an innere Ressourcen, Stärken und Qualitäten, die bereits in dir vorhanden sind.",
+        ],
+      },
+      {
+        heading: "Das erwartet dich",
+        checklist: [
+          "Mandalas für Erwachsene",
+          "Krafttierbotschaften",
+          "Affirmationen",
+          "Reflexionsimpulse",
+          "Momente der Entspannung",
+          "Bewusste Me-Time",
+        ],
+      },
+      {
+        heading: "Warum Mandalas?",
+        body: ["Das Ausmalen von Mandalas kann helfen:"],
+        checklist: [
+          "den Geist zu beruhigen",
+          "Stress abzubauen",
+          "die Konzentration zu fördern",
+          "innere Balance zu stärken",
+        ],
+      },
+      {
+        heading: "Für Frauen, die…",
+        bullets: [
+          "bewusste Auszeiten suchen",
+          "zur Ruhe kommen möchten",
+          "Kreativität und Achtsamkeit verbinden möchten",
+        ],
+      },
+    ],
     price: eur(19),
     tier: "einstieg",
     format: "workbook",
@@ -633,14 +980,41 @@ export const products: Product[] = [
     id: "seelenkompass-monatsimpuls",
     categoryId: "deiner-intuition-vertrauen",
     worldId: "dich-selbst-verstehen-entfalten",
-    title: "Seelenkompass · Monatsimpuls",
-    tagline: "Deine innere Stimme — Monat für Monat.",
-    problem: "Du möchtest deiner Intuition mehr vertrauen und dranbleiben.",
-    outcome:
-      "Du bekommst monatliche Impulse, die deine Intuition stärken und ausrichten.",
+    title: "Seelenkompass",
+    subtitle: "Klarheit für deinen Weg",
+    tagline: "Eine neue Perspektive. Ein Impuls. Eine Bestätigung deines Gefühls.",
+    problem:
+      "Manchmal stehst du an einem Punkt, an dem du dir Orientierung wünschst.",
+    outcome: "Du findest wieder Zugang zu deiner eigenen Klarheit.",
     description:
-      "Kartenlegungen und monatliche Impulse, die dich mit deiner inneren Stimme verbinden und deine Intuition trainieren.",
+      "Kartenlegungen und Impulse — als Monatsimpuls, Jahresimpuls oder Tiefenimpuls —, die dir Orientierung geben und deine Intuition stärken.",
+    longDescription: [
+      {
+        body: [
+          "Manchmal stehen wir an einem Punkt im Leben, an dem wir uns Orientierung wünschen. Eine neue Perspektive. Einen Impuls. Eine Bestätigung unseres Gefühls.",
+          "Der Seelenkompass schenkt dir genau diesen Raum.",
+        ],
+      },
+      {
+        heading: "Monatsimpuls",
+        body: ["Ein Blick auf die Energien, Themen und Möglichkeiten des kommenden Monats. Du erhältst Impulse zu:"],
+        checklist: ["Beruf", "Finanzen", "Beziehungen", "Persönlicher Entwicklung", "Seelenbotschaften"],
+      },
+      {
+        heading: "Jahresimpuls",
+        body: ["Ein Überblick über die kommenden zwölf Monate. Monat für Monat. Mit Orientierung, Inspiration und neuen Perspektiven."],
+      },
+      {
+        heading: "Tiefenimpuls",
+        body: ["Für Themen, die dich besonders beschäftigen. Für Muster, die sich wiederholen. Für Situationen, die nach Klarheit verlangen."],
+      },
+      {
+        heading: "Das Ziel",
+        body: ["Nicht Entscheidungen für dich zu treffen. Sondern dich dabei zu unterstützen, wieder Zugang zu deiner eigenen Klarheit zu finden."],
+      },
+    ],
     price: eur(29),
+    priceNote: "ab",
     tier: "einstieg",
     format: "kartenset",
     method: ["bewusstseinsarbeit"],
@@ -655,11 +1029,53 @@ export const products: Product[] = [
     categoryId: "fuelle-geld",
     worldId: "dich-selbst-verstehen-entfalten",
     title: "Fülle beginnt in dir",
-    tagline: "Fülle ist zuerst eine innere Entscheidung.",
-    problem: "Dein Verhältnis zu Geld und Fülle ist von alten Mustern geprägt.",
-    outcome: "Du löst Blockaden und öffnest dich für Fülle in allen Formen.",
+    subtitle: "Löse alte Geldmuster und öffne dich für mehr Wohlstand.",
+    tagline: "Fülle beginnt nicht im Außen. Fülle beginnt in dir.",
+    problem:
+      "Viele Menschen tragen unbewusst Überzeugungen über Geld in sich, die sie klein halten.",
+    outcome:
+      "Eine neue Beziehung zu Geld — mehr Vertrauen, mehr Bewusstsein, mehr Offenheit für Fülle.",
     description:
-      "Ein Workbook (ehemals Gold Edition Money Mindset), das dein Verhältnis zu Geld und Fülle von innen heraus wandelt.",
+      "Ein Workbook, das dir hilft, alte Geldmuster und Glaubenssätze zu lösen und eine neue, offene Beziehung zu Fülle zu entwickeln.",
+    longDescription: [
+      {
+        body: [
+          "Viele Menschen tragen unbewusst Überzeugungen über Geld in sich, die sie klein halten. Prägungen. Glaubenssätze. Ängste.",
+          "Oft entstehen sie bereits in der Kindheit und beeinflussen unser Handeln bis heute.",
+        ],
+      },
+      {
+        heading: "Fülle beginnt nicht im Außen.",
+        body: [
+          "Fülle beginnt in dir.",
+          "Dieses Workbook begleitet dich dabei, deine Beziehung zu Geld bewusst wahrzunehmen und neue Möglichkeiten zu entdecken.",
+        ],
+      },
+      {
+        heading: "Inhalte",
+        checklist: [
+          "Glaubenssatzarbeit",
+          "Reflexionsübungen",
+          "Manifestationsübungen",
+          "Visualisierungen",
+          "Affirmationen",
+          "Rituale",
+          "Worksheets",
+        ],
+      },
+      {
+        heading: "Das Ziel",
+        body: ["Eine neue Beziehung zu Geld. Mehr Vertrauen. Mehr Bewusstsein. Mehr Offenheit für Fülle."],
+      },
+      {
+        heading: "Für Frauen, die…",
+        bullets: [
+          "alte Geldmuster loslassen möchten",
+          "ihre finanzielle Energie bewusst verändern möchten",
+          "mehr Leichtigkeit im Umgang mit Geld entwickeln möchten",
+        ],
+      },
+    ],
     price: eur(24),
     tier: "einstieg",
     format: "workbook",
@@ -675,13 +1091,63 @@ export const products: Product[] = [
     categoryId: "schulalltag",
     worldId: "fuer-lehrer-paedagogen",
     title: "Mentale Magie im Schulalltag",
-    tagline: "Mehr Ruhe und Wirkung — für die, die Kinder begleiten.",
+    subtitle: "Kinder anders abholen. Besser verstehen.",
+    tagline: "Kinder denken, fühlen und lernen heute anders — und brauchen einen anderen Zugang.",
     problem:
-      "Der Schulalltag zehrt an Kraft, Nerven und Verbindung.",
+      "Viele Kinder denken, fühlen und lernen heute anders als frühere Generationen und brauchen oft einen anderen Zugang.",
     outcome:
-      "Du bringst mehr Ruhe, Präsenz und Wirksamkeit in deinen Schulalltag.",
+      "Du stärkst Kinder mental, förderst Selbstvertrauen und begleitest sie ganzheitlich.",
     description:
-      "Ein praxisnaher Begleiter für Lehrkräfte und Pädagog:innen: mentale Werkzeuge für Ruhe, Verbindung und Wirksamkeit im Alltag mit Kindern.",
+      "Ein Kurs für Lehrer, Pädagogen und alle, die mit Kindern arbeiten — praktische Methoden für mentale Stärke, Selbstvertrauen und ganzheitliches Lernen.",
+    longDescription: [
+      {
+        body: [
+          "Unsere Kinder wachsen in einer Zeit auf, die sich stark verändert. Viele Kinder denken, fühlen und lernen heute anders als frühere Generationen. Deshalb brauchen sie oft auch einen anderen Zugang.",
+        ],
+      },
+      {
+        body: [
+          "Dieser Kurs richtet sich an Lehrer, Pädagogen und Menschen, die mit Kindern arbeiten. Er verbindet praktische Methoden mit neuen Perspektiven auf Lernen, Entwicklung und Persönlichkeitsstärkung.",
+        ],
+      },
+      {
+        heading: "Du lernst",
+        checklist: [
+          "Kinder mental zu stärken",
+          "Selbstvertrauen zu fördern",
+          "Emotionale Stabilität aufzubauen",
+          "Intuition zu stärken",
+          "Kreative Methoden einzusetzen",
+          "Positive Glaubenssätze in den Alltag zu integrieren",
+        ],
+      },
+      {
+        heading: "Das bekommst du",
+        checklist: [
+          "Videokurs",
+          "Digitales Kartenset",
+          "Worksheets",
+          "Wochenpläne",
+          "Praktische Übungen",
+          "Sofort umsetzbare Impulse",
+        ],
+      },
+      {
+        heading: "Für wen ist der Kurs geeignet?",
+        bullets: [
+          "Lehrer",
+          "Pädagogen",
+          "Nachhilfelehrer",
+          "Lernbegleiter",
+          "Menschen, die Kinder stärken möchten",
+        ],
+      },
+      {
+        heading: "Das Ziel",
+        body: ["Unterricht neu denken. Verbindung stärken. Kinder ganzheitlich begleiten."],
+      },
+    ],
+    closing: ["Für unsere Kinder. Für unsere Zukunft."],
     price: eur(179),
     tier: "experten",
     format: "ebook",

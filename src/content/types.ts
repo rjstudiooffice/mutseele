@@ -143,6 +143,8 @@ export interface Product {
 
   // — Handel —
   price: Money;
+  /** Optionaler Präfix vor dem Preis, z. B. „ab“ (mehrere Varianten). */
+  priceNote?: string;
   tier: PriceTier;
   format: ProductFormat;
   /** Methode(n) im Hintergrund — UI zeigt sie nur dezent. */

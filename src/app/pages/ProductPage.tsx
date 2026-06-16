@@ -84,7 +84,10 @@ export default function ProductPage() {
             <p className="text-base italic font-light mb-7" style={{ color: isSignature ? "#FBD0B0" : "#E01F5A" }}>{p.tagline}</p>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <span style={D} className={`text-[2rem] font-light ${isSignature ? "text-white" : "text-foreground"}`}>{formatPrice(p)}</span>
+              <span style={D} className={`text-[2rem] font-light ${isSignature ? "text-white" : "text-foreground"}`}>
+                {p.priceNote && <span className="text-[1rem] align-middle mr-1.5 opacity-70">{p.priceNote}</span>}
+                {formatPrice(p)}
+              </span>
               <a
                 href={p.tentary?.checkoutUrl} target="_blank" rel="noopener noreferrer"
                 className="px-7 py-3 rounded-full text-sm font-medium tracking-wide hover:opacity-90 transition-opacity shadow-md"
