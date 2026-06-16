@@ -32,19 +32,19 @@ export default function BundlePage() {
     <PageShell>
       {/* Hero */}
       <section className="px-6 pt-10 pb-12 lg:pt-14 lg:pb-16" style={{ background: GS }}>
-        <div className="max-w-lg mx-auto lg:max-w-4xl">
+        <div className="max-w-lg mx-auto lg:max-w-5xl">
           <Breadcrumb items={[
             { label: "Start", to: "/" },
             ...(world ? [{ label: world.shortLabel, to: `/${world.id}` }] : []),
             { label: b.title },
           ]} />
-          <FadeUp>
+          <FadeUp className="text-center max-w-2xl mx-auto flex flex-col items-center">
             <span className="block text-[10px] tracking-[0.35em] uppercase font-medium mb-3" style={{ color: "#E01F5A" }}>Bundle · {items.length} Produkte</span>
             <h1 style={D} className="text-[2rem] lg:text-[2.7rem] font-light text-foreground mb-3 leading-tight">{b.title}</h1>
             <p className="text-base italic font-light mb-5" style={{ color: "#E01F5A" }}>{b.tagline}</p>
             <p className="text-muted-foreground text-base leading-relaxed max-w-xl mb-7">{b.description}</p>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <div className="flex items-baseline gap-3">
                 <span style={D} className="text-[2.2rem] font-light text-foreground">{formatPrice(b)}</span>
                 {b.price.compareAt && (
@@ -67,7 +67,7 @@ export default function BundlePage() {
 
       {/* Enthaltene Produkte */}
       <section className="px-6 py-14 lg:py-20 bg-background">
-        <div className="max-w-lg mx-auto lg:max-w-4xl">
+        <div className="max-w-lg mx-auto lg:max-w-5xl">
           <FadeUp>
             <h2 style={D} className="text-[1.6rem] lg:text-[2rem] font-light text-foreground mb-2 leading-snug">Das ist <em className="italic" style={GT}>enthalten</em></h2>
             <p className="text-muted-foreground text-sm mb-8 flex items-center gap-1.5">

@@ -75,7 +75,7 @@ export default function FreebiePage() {
   return (
     <PageShell>
       <section className="px-6 pt-10 pb-12 lg:pt-16 lg:pb-16" style={{ background: "linear-gradient(160deg,#fce4ec 0%,#fde8d8 60%,#fff3e0 100%)" }}>
-        <div className="max-w-lg mx-auto lg:max-w-4xl">
+        <div className="max-w-lg mx-auto lg:max-w-5xl">
           <Breadcrumb items={[{ label: "Start", to: "/" }, { label: "Kostenlose Ressourcen" }]} />
           <FadeUp>
             <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6 shadow-md" style={{ background: G }}>
@@ -93,7 +93,7 @@ export default function FreebiePage() {
       </section>
 
       <section className="px-6 py-14 lg:py-20 bg-background">
-        <div className="max-w-lg mx-auto lg:max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="max-w-lg mx-auto lg:max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-4">
           {leadMagnets.map((lm) => <FreebieCard key={lm.id} lm={lm} />)}
         </div>
       </section>

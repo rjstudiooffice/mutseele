@@ -21,18 +21,18 @@ export function SiteNav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/92 backdrop-blur-md border-b border-border">
-      <div className="max-w-lg mx-auto px-5 py-3 flex items-center justify-between lg:max-w-6xl lg:px-10">
+      <div className="max-w-lg mx-auto px-5 py-3 flex items-center justify-between lg:max-w-5xl lg:px-10">
         <Link to="/" aria-label="Zur Startseite">
           <ImageWithFallback src={logoSabrina} alt="MUTSeeLe" className="h-10 w-auto object-contain" style={{}} />
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map(([label, href]) => (
-            <a key={label} href={href} className="text-foreground/60 hover:text-foreground text-sm tracking-wide transition-colors">{label}</a>
+            <a key={label} href={href} className="text-foreground/60 hover:text-foreground text-sm tracking-wide transition-colors whitespace-nowrap">{label}</a>
           ))}
-          <button className="text-white px-5 py-2.5 rounded-full text-sm tracking-wide hover:opacity-90 transition-opacity" style={{ background: G }}>
-            Kostenloses Erstgespräch buchen
+          <button className="text-white px-5 py-2.5 rounded-full text-sm tracking-wide hover:opacity-90 transition-opacity whitespace-nowrap" style={{ background: G }}>
+            Erstgespräch buchen
           </button>
         </div>
 
@@ -74,7 +74,7 @@ const footerLinks: [string, string][] = [
 export function SiteFooter() {
   return (
     <footer className="px-6 py-14" style={{ background: "var(--foreground)" }}>
-      <div className="max-w-lg mx-auto lg:max-w-4xl lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-16 lg:items-start">
+      <div className="max-w-lg mx-auto lg:max-w-5xl lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-16 lg:items-start">
         <div className="mb-8 lg:mb-0">
           <Link to="/">
             <ImageWithFallback src={logoSabrina} alt="MUTSeeLe by Sabrina Wenzl" className="h-10 w-auto object-contain mb-4" />
@@ -94,7 +94,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="max-w-lg mx-auto lg:max-w-4xl pt-6 border-t border-background/10 flex items-center justify-between mt-6 lg:mt-0">
+      <div className="max-w-lg mx-auto lg:max-w-5xl pt-6 border-t border-background/10 flex items-center justify-between mt-6 lg:mt-0">
         <p className="text-background/25 text-xs">© {new Date().getFullYear()} MUTSeeLe by Sabrina Wenzl</p>
         <Link to="/brand-bible" className="text-background/25 hover:text-background/50 text-xs transition-colors duration-200">Brand Bible</Link>
       </div>

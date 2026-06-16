@@ -27,21 +27,21 @@ export default function WorldPage() {
     <PageShell>
       {/* Hero */}
       <section className="px-6 pt-10 pb-12 lg:pt-16 lg:pb-16" style={{ background: GS }}>
-        <div className="max-w-lg mx-auto lg:max-w-4xl">
+        <div className="max-w-lg mx-auto lg:max-w-5xl">
           <Breadcrumb items={[{ label: "Start", to: "/" }, { label: world.shortLabel }]} />
-          <FadeUp>
-            <span className="text-[3rem] block mb-4 leading-none">{world.emoji}</span>
+          <FadeUp className="text-center max-w-2xl mx-auto">
+            <span className="text-[3.4rem] block mb-4 leading-none">{world.emoji}</span>
             <h1 style={D} className="text-[2.2rem] lg:text-[3rem] font-light text-foreground mb-4 leading-snug">
               {world.title}
             </h1>
-            <p className="text-muted-foreground text-base leading-relaxed max-w-xl">{world.promise}</p>
+            <p className="text-muted-foreground text-base leading-relaxed max-w-xl mx-auto">{world.promise}</p>
           </FadeUp>
         </div>
       </section>
 
       {/* Kategorien mit Produkten */}
       <div className="px-6 py-14 lg:py-20" style={{ background: "linear-gradient(180deg,#FDF7F4 0%,#fde8d8 80%,#fce4ec 100%)" }}>
-        <div className="max-w-lg mx-auto lg:max-w-4xl flex flex-col gap-16">
+        <div className="max-w-lg mx-auto lg:max-w-5xl flex flex-col gap-16">
           {categories.map((cat) => {
             const products = getProductsByCategory(cat.id);
             if (!products.length) return null;

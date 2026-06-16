@@ -58,7 +58,7 @@ export default function ProductPage() {
           ? { background: "linear-gradient(135deg,#2D1A22 0%,#5A2233 60%,#E01F5A 150%)", color: "white" }
           : { background: GS }}
       >
-        <div className="max-w-lg mx-auto lg:max-w-4xl">
+        <div className="max-w-lg mx-auto lg:max-w-5xl">
           <div className={isSignature ? "[&_*]:!text-white/70" : ""}>
             <Breadcrumb items={[
               { label: "Start", to: "/" },
@@ -67,24 +67,20 @@ export default function ProductPage() {
             ]} />
           </div>
 
-          <FadeUp>
+          <FadeUp className="text-center max-w-2xl mx-auto flex flex-col items-center">
             {isSignature && (
               <span className="inline-flex items-center gap-2 text-[10px] tracking-[0.3em] uppercase font-semibold px-3 py-1.5 rounded-full mb-5" style={{ background: "rgba(255,255,255,0.14)" }}>
                 <Sparkles size={12} /> Signature · Referenzwerk
               </span>
             )}
-            <div className="flex items-start gap-4 mb-4">
-              <span className="text-[2.6rem] leading-none">{p.emoji}</span>
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-medium mb-1.5" style={{ color: isSignature ? "rgba(255,255,255,0.6)" : "var(--muted-foreground)" }}>
-                  {FORMAT_LABEL[p.format]}{p.badge && ` · ${BADGE_LABEL[p.badge]}`}
-                </p>
-                <h1 style={D} className={`text-[2rem] lg:text-[2.7rem] font-light leading-tight ${isSignature ? "text-white" : "text-foreground"}`}>{p.title}</h1>
-              </div>
-            </div>
-            <p className="text-base italic font-light mb-6" style={{ color: isSignature ? "#FBD0B0" : "#E01F5A" }}>{p.tagline}</p>
+            <span className="text-[3rem] leading-none mb-3">{p.emoji}</span>
+            <p className="text-[10px] uppercase tracking-[0.2em] font-medium mb-2" style={{ color: isSignature ? "rgba(255,255,255,0.6)" : "var(--muted-foreground)" }}>
+              {FORMAT_LABEL[p.format]}{p.badge && ` · ${BADGE_LABEL[p.badge]}`}
+            </p>
+            <h1 style={D} className={`text-[2rem] lg:text-[2.7rem] font-light leading-tight mb-3 ${isSignature ? "text-white" : "text-foreground"}`}>{p.title}</h1>
+            <p className="text-base italic font-light mb-7" style={{ color: isSignature ? "#FBD0B0" : "#E01F5A" }}>{p.tagline}</p>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <span style={D} className={`text-[2rem] font-light ${isSignature ? "text-white" : "text-foreground"}`}>{formatPrice(p)}</span>
               <a
                 href={p.tentary?.checkoutUrl} target="_blank" rel="noopener noreferrer"
@@ -93,10 +89,10 @@ export default function ProductPage() {
               >
                 {ctaLabel(p)}
               </a>
-              {p.scarcity && (
-                <span className="text-xs font-semibold" style={{ color: isSignature ? "#FBD0B0" : "#E01F5A" }}>{p.scarcity}</span>
-              )}
             </div>
+            {p.scarcity && (
+              <span className="text-xs font-semibold mt-3" style={{ color: isSignature ? "#FBD0B0" : "#E01F5A" }}>{p.scarcity}</span>
+            )}
           </FadeUp>
         </div>
       </section>
@@ -156,7 +152,7 @@ export default function ProductPage() {
       {/* Produktfamilie */}
       {family && familyProducts.length > 0 && (
         <section className="px-6 py-14 lg:py-20" style={{ background: GS }}>
-          <div className="max-w-lg mx-auto lg:max-w-4xl">
+          <div className="max-w-lg mx-auto lg:max-w-5xl">
             <FadeUp>
               <span className="block text-[10px] tracking-[0.35em] uppercase font-medium mb-2" style={{ color: "#E01F5A" }}>{family.title}</span>
               <h2 style={D} className="text-[1.6rem] lg:text-[2rem] font-light text-foreground mb-3 leading-snug">Gehört <em className="italic" style={GT}>zusammen</em></h2>
@@ -172,7 +168,7 @@ export default function ProductPage() {
       {/* Passt dazu (Empfehlungs-Engine) */}
       {related.length > 0 && (
         <section className="px-6 py-14 lg:py-20 bg-background">
-          <div className="max-w-lg mx-auto lg:max-w-4xl">
+          <div className="max-w-lg mx-auto lg:max-w-5xl">
             <FadeUp>
               <h2 style={D} className="text-[1.6rem] lg:text-[2rem] font-light text-foreground mb-7 leading-snug text-center">Passt <em className="italic" style={GT}>dazu</em></h2>
             </FadeUp>

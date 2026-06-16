@@ -101,7 +101,7 @@ export default function App() {
       {/* ══ TRUST BAR ═══════════════════════════════════════════════════════ */}
       <div className="px-6 py-5 border-y" style={{ borderColor: "rgba(224,31,90,0.1)", background: "white" }}>
         <FadeUp>
-          <div className="max-w-lg mx-auto lg:max-w-4xl flex flex-wrap items-center justify-center gap-x-7 gap-y-2">
+          <div className="max-w-lg mx-auto lg:max-w-5xl flex flex-wrap items-center justify-center gap-x-7 gap-y-2">
             <div className="flex items-center gap-1">
               {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={13} style={{ fill: "#E01F5A", color: "#E01F5A" }} />)}
             </div>
@@ -130,7 +130,7 @@ export default function App() {
 
       {/* ══ THEMENWELTEN ═════════════════════════════════════════════════════ */}
       <section id="themenwelten" className="px-6 py-16 bg-background lg:py-24">
-        <div className="max-w-lg mx-auto lg:max-w-4xl">
+        <div className="max-w-lg mx-auto lg:max-w-5xl">
           <FadeUp>
             <span className="block text-[10px] tracking-[0.35em] uppercase font-medium mb-3 text-center" style={{ color: "#E01F5A" }}>Meine Themenwelten</span>
             <h2 style={D} className="text-[2rem] lg:text-[2.5rem] font-light text-center text-foreground mb-3 leading-snug">
@@ -162,7 +162,7 @@ export default function App() {
 
       {/* ══ PROZESS ══════════════════════════════════════════════════════════ */}
       <section className="px-6 py-16 lg:py-24" style={{ background: "white" }}>
-        <div className="max-w-lg mx-auto lg:max-w-4xl">
+        <div className="max-w-lg mx-auto lg:max-w-5xl">
           <FadeUp>
             <span className="block text-[10px] tracking-[0.35em] uppercase font-medium mb-3 text-center" style={{ color: "#E01F5A" }}>So einfach geht's</span>
             <h2 style={D} className="text-[2rem] lg:text-[2.5rem] font-light text-center text-foreground mb-10 leading-snug">
@@ -191,7 +191,7 @@ export default function App() {
 
       {/* ══ PRODUKTE ═════════════════════════════════════════════════════════ */}
       <section id="produkte" className="px-6 py-16 lg:py-24" style={{ background: "linear-gradient(180deg,#FDF7F4 0%,#fde8d8 60%,#fce4ec 100%)" }}>
-        <div className="max-w-lg mx-auto lg:max-w-4xl">
+        <div className="max-w-lg mx-auto lg:max-w-5xl">
           <FadeUp>
             <span className="block text-[10px] tracking-[0.35em] uppercase font-medium mb-3 text-center" style={{ color: "#E01F5A" }}>Meine Angebote</span>
             <h2 style={D} className="text-[2rem] lg:text-[2.5rem] font-light text-center text-foreground mb-2 leading-snug">
@@ -205,19 +205,21 @@ export default function App() {
             </div>
           </FadeUp>
 
-          {/* World tabs */}
-          <div className="flex rounded-2xl p-1 mb-8 gap-1" style={{ background: "rgba(224,31,90,0.08)" }}>
-            {MAIN_WORLDS.map((w) => (
-              <button
-                key={w.id} onClick={() => setActiveWorldId(w.id)}
-                className="flex-1 py-2.5 px-1 rounded-xl text-[11px] font-medium tracking-wide transition-all duration-300 leading-tight"
-                style={activeWorldId === w.id
-                  ? { background: "white", color: "#E01F5A", boxShadow: "0 1px 10px rgba(224,31,90,0.18)" }
-                  : { color: "var(--muted-foreground)", background: "transparent" }}
-              >
-                {w.emoji} {w.shortLabel}
-              </button>
-            ))}
+          {/* World tabs — kompakt & zentriert */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex rounded-full p-1 gap-1" style={{ background: "rgba(224,31,90,0.08)" }}>
+              {MAIN_WORLDS.map((w) => (
+                <button
+                  key={w.id} onClick={() => setActiveWorldId(w.id)}
+                  className="py-2.5 px-7 sm:px-9 rounded-full text-sm font-medium tracking-wide transition-all duration-300 leading-tight"
+                  style={activeWorldId === w.id
+                    ? { background: "white", color: "#E01F5A", boxShadow: "0 1px 10px rgba(224,31,90,0.18)" }
+                    : { color: "var(--muted-foreground)", background: "transparent" }}
+                >
+                  {w.emoji} {w.shortLabel}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="flex items-center gap-2 mb-6">
@@ -300,7 +302,7 @@ export default function App() {
 
       {/* ══ FREEBIE ══════════════════════════════════════════════════════════ */}
       <section id="freebie" className="px-6 py-16 lg:py-24" style={{ background: "linear-gradient(160deg,#fce4ec 0%,#fde8d8 60%,#fff3e0 100%)" }}>
-        <div className="max-w-lg mx-auto lg:max-w-4xl">
+        <div className="max-w-lg mx-auto lg:max-w-5xl">
           <FadeUp>
             {/* Mobile: centered, Desktop: two columns */}
             <div className="text-center lg:hidden">
@@ -410,7 +412,7 @@ export default function App() {
 
       {/* ══ TESTIMONIALS ═════════════════════════════════════════════════════ */}
       <section id="testimonials" className="px-6 py-16 bg-background lg:py-24">
-        <div className="max-w-lg mx-auto lg:max-w-4xl">
+        <div className="max-w-lg mx-auto lg:max-w-5xl">
           <FadeUp>
             <span className="block text-[10px] tracking-[0.35em] uppercase font-medium mb-3 text-center" style={{ color: "#E01F5A" }}>Erfahrungen</span>
             <h2 style={D} className="text-[2rem] lg:text-[2.5rem] font-light text-center text-foreground mb-3 leading-snug">
