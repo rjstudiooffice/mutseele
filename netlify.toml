@@ -1,0 +1,20 @@
+# Netlify-Konfiguration
+#
+# Build: npm run build (sitemap → vite build → prerender). Der Prerender findet
+# auf dem Linux-Build-Image kein Chrome und überspringt sich dann sauber – der
+# Build bricht NICHT ab. Veröffentlicht wird der inlined Single-File-Build in dist/.
+#
+# SPA-Fallback (Deep-Links wie /produkt/:slug) liegt zusätzlich in public/_redirects.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA-Fallback redundant zur _redirects-Datei (schadet nicht, dokumentiert die Absicht).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

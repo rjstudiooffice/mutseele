@@ -38,17 +38,20 @@ function findChrome() {
 
 const executablePath = findChrome();
 if (!executablePath) {
-  console.error("[prerender] Kein Chrome gefunden. Setze PUPPETEER_EXECUTABLE_PATH.");
-  process.exit(1);
+  // Auf CI-Build-Images (z. B. Netlify) ist kein Chrome installiert. Der
+  // Prerender ist optional (SEO-Optimierung nur für „/“) und darf den Deploy
+  // NICHT brechen – wir überspringen ihn dann sauber. Lokal mit Chrome läuft er.
+  console.warn("[prerender] Kein Chrome gefunden – Prerender wird übersprungen. Build läuft weiter (Startseite wird clientseitig gerendert).");
+  process.exit(0);
 }
 
-const browser = await puppeteer.launch({
-  executablePath,
-  headless: "new",
-  args: ["--no-sandbox", "--disable-setuid-sandbox"],
-});
-
+let browser;
 try {
+  browser = await puppeteer.launch({
+    executablePath,
+    headless: "new",
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 900 });
   await page.goto(pathToFileURL(distHtml).href, { waitUntil: "networkidle0", timeout: 60000 });
@@ -91,12 +94,14 @@ try {
   );
 
   if (html === before) {
-    console.error('[prerender] Konnte <div id="root"></div> nicht ersetzen – Markup unverändert?');
-    process.exit(1);
+    throw new Error('Konnte <div id="root"></div> nicht ersetzen – Markup unverändert?');
   }
 
   writeFileSync(distHtml, html, "utf8");
   console.log(`[prerender] ✓ Statisches Markup eingebettet (${(rootHtml.length / 1024).toFixed(1)} KB).`);
+} catch (err) {
+  // Prerender ist optional – Fehler dürfen den Build/Deploy nicht abbrechen.
+  console.warn(`[prerender] übersprungen: ${err.message}. Build läuft weiter.`);
 } finally {
-  await browser.close();
+  if (browser) await browser.close();
 }
