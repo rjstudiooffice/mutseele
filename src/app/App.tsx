@@ -173,7 +173,7 @@ export default function App() {
           </FadeUp>
           <div className="flex flex-col gap-4 lg:grid lg:grid-cols-3 lg:gap-6">
             {[
-              { step: "01", icon: <Heart size={20} style={{ color: "#E01F5A" }} />,        title: "Hol dir dein Gratis-Freebie",  desc: "Starte kostenlos mit meiner geführten Atemreise — in 5 Minuten zurück zu dir." },
+              { step: "01", icon: <Heart size={20} style={{ color: "#E01F5A" }} />,        title: "Hol dir dein Gratis-Freebie",  desc: "Starte kostenlos mit einem unserer Impulse — dein erster Schritt zu mehr Klarheit, ganz ohne Risiko." },
               { step: "02", icon: <Sparkles size={20} style={{ color: "#E01F5A" }} />,     title: "Wähle dein Angebot",           desc: "Workbooks, Programme oder persönliche Begleitung — du entscheidest wie tief du gehen möchtest." },
               { step: "03", icon: <CheckCircle size={20} style={{ color: "#E01F5A" }} />,  title: "Starte deine Reise",           desc: "Ich begleite dich — liebevoll, tief und vollständig auf dich abgestimmt." },
             ].map((s, i) => (
@@ -366,7 +366,7 @@ export default function App() {
                   Dein erster Schritt <em className="italic" style={GT}>beginnt hier.</em>
                 </h2>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                  Hole dir jetzt meine kostenlose geführte Atemreise — in unter 5 Minuten zurück zu deiner Mitte.
+                  {FEATURED_FREEBIE.description}
                 </p>
                 <div className="space-y-3">
                   {(FEATURED_FREEBIE.bullets ?? []).map((f) => (
@@ -495,12 +495,12 @@ export default function App() {
           <FadeUp>
             <Accordion type="single" collapsible className="flex flex-col gap-3">
               {[
-                { q: "Ist MUTSeeLe das Richtige für mich?",           a: "Wenn du das Gefühl hast, irgendwo feststeckst — ob als Mutter, als Frau, spirituell oder im Alltag — dann bist du hier richtig. Ich begleite Menschen, die bereit sind, ehrlich hinzuschauen und sich selbst wieder nahezukommen." },
-                { q: "Wie läuft eine 1:1-Session ab?",                a: "Wir arbeiten per Video-Call (ca. 60–90 Minuten). Ich kombiniere Gespräch, Energiearbeit und je nach Bedarf Elemente aus Human Design oder Numerologie. Nach jeder Session bekommst du persönliche Impulse und Übungen." },
-                { q: "Muss ich spirituell offen oder erfahren sein?", a: "Nein — du brauchst keine Vorkenntnisse. Ich begegne dir dort, wo du gerade bist. Ob du zum ersten Mal über dich nachdenkst oder schon länger auf dem Weg bist: alle sind willkommen." },
-                { q: "Was wenn ich keine Ergebnisse sehe?",           a: "Echte Veränderung braucht Zeit und Ehrlichkeit mit sich selbst. Ich begleite dich dabei, aber der Weg gehört dir. Wenn du das Gefühl hast, dass etwas nicht passt, sprechen wir offen darüber — das ist mein Versprechen." },
-                { q: "Wie bekomme ich mein Gratis-Freebie?",          a: "Einfach deine E-Mail-Adresse im Freebie-Bereich eingeben — du bekommst die Atemreise sofort in dein Postfach. Schau auch im Spam-Ordner nach, falls du nichts siehst." },
-                { q: "Wie schnell sehe ich erste Veränderungen?",     a: "Viele Frauen beschreiben schon nach der ersten Session oder den ersten Tagen mit einem Workbook ein Gefühl von Leichtigkeit und Klarheit. Tiefere Transformation entfaltet sich über Wochen — aber du merkst sie." },
+                { q: "Für wen ist MUTSeeLe gedacht?",                  a: "Für Eltern — vor allem Mütter —, die ihr Kind besser verstehen und begleiten möchten, und für Frauen, die sich selbst besser verstehen und entfalten wollen. Du musst dich mit keiner Methode auskennen — es geht um Verständnis, Klarheit und Orientierung." },
+                { q: "Brauche ich Vorkenntnisse in Human Design oder Numerologie?", a: "Nein. Alles ist so aufbereitet, dass du ohne Vorwissen sofort etwas damit anfangen kannst. Die Methoden bleiben im Hintergrund — du bekommst keine Theorie, sondern verständliche Erkenntnisse für deinen Alltag." },
+                { q: "Wie erhalte ich mein Produkt nach dem Kauf?",   a: "Die meisten Produkte sind digital und stehen dir direkt nach dem Kauf zur Verfügung — du bekommst Zugang bzw. Download per E-Mail. Schau auch im Spam-Ordner nach, falls du nichts siehst." },
+                { q: "Was ist der Unterschied zwischen dem Master Guide und einer persönlichen Analyse?", a: "Der Human Design Master Guide ist ein Referenzwerk, mit dem du selbst lernst, Charts zu lesen und zu verstehen. Die Geburtsdatenanalyse und die Persönliche Betriebsanleitung sind individuelle Auswertungen, die ich für dich bzw. dein Kind erstelle — inklusive persönlichem Termin." },
+                { q: "Kann ich die Inhalte für mein Kind und für mich nutzen?", a: "Ja. Viele Mütter starten bei ihrem Kind und entdecken dabei viel über sich selbst — und umgekehrt. Es gibt Produkte für beide Welten, die sich wunderbar ergänzen." },
+                { q: "Ich bin unsicher, welches Produkt zu mir passt.", a: "Mach das kurze Quiz „Finde dein Produkt“ — in einer Minute bekommst du eine passende Empfehlung. Oder schreib mir einfach, ich helfe dir, das Richtige für deine Situation zu finden." },
               ].map((item, i) => (
                 <AccordionItem key={i} value={`faq-${i}`} className="rounded-2xl border px-5 overflow-hidden" style={{ borderColor: "rgba(224,31,90,0.12)", background: GS }}>
                   <AccordionTrigger className="text-sm font-medium text-foreground text-left hover:no-underline py-5" style={B}>{item.q}</AccordionTrigger>

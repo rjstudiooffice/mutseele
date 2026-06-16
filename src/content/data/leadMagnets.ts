@@ -7,25 +7,6 @@ import type { LeadMagnet } from "../types";
 // ─────────────────────────────────────────────────────────────────────────────
 export const leadMagnets: LeadMagnet[] = [
   {
-    // Hervorgehobenes Freebie für den Startseiten-Funnel.
-    id: "freebie-atemreise",
-    title: "5-Minuten-Atemreise für Frauen",
-    tagline: "In unter 5 Minuten zurück zu deiner Mitte.",
-    description:
-      "Eine kostenlose geführte Atemreise — dein sanfter erster Schritt zurück zu dir.",
-    audience: "frauen",
-    emailTag: "freebie_atemreise",
-    leadsToWorldId: "dich-selbst-verstehen-entfalten",
-    leadsToProductIds: ["seelenstark-erwachsene", "vision-book"],
-    featured: true,
-    bullets: [
-      "Geführtes PDF + Audiodatei",
-      "Sofort nach Anmeldung verfügbar",
-      "Keine Vorkenntnisse nötig",
-      "Von über 500 Frauen geliebt",
-    ],
-  },
-  {
     id: "freebie-lerntipps",
     title: "Lerntipps für entspanntes Lernen",
     tagline: "Kleine Impulse, große Wirkung im Lernalltag.",
@@ -48,15 +29,23 @@ export const leadMagnets: LeadMagnet[] = [
     leadsToProductIds: ["schulstress-verstehen", "seelenstark-kind"],
   },
   {
+    // Hervorgehobenes Freebie für den Startseiten-Funnel.
     id: "freebie-lebensweg-kompass",
     title: "Lebensweg Kompass",
     tagline: "Ein erster Blick auf deinen Weg.",
     description:
-      "Ein kostenloser Impuls, der dir Orientierung über deinen Lebensweg gibt.",
+      "Ein kostenloser Impuls, der dir Orientierung über deinen Lebensweg gibt — dein sanfter erster Schritt zu mehr Klarheit.",
     audience: "frauen",
     emailTag: "freebie_lebensweg_kompass",
     leadsToWorldId: "dich-selbst-verstehen-entfalten",
     leadsToProductIds: ["geburtsdatenanalyse", "seelenstark-erwachsene"],
+    featured: true,
+    bullets: [
+      "Kostenloser PDF-Impuls",
+      "Sofort nach Anmeldung verfügbar",
+      "Keine Vorkenntnisse nötig",
+      "Dein erster Schritt zu mehr Klarheit",
+    ],
   },
   {
     id: "freebie-wegbegleiter-erwachsene",
